@@ -320,7 +320,7 @@ int main(int argc, char **argv)
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
     glutInitWindowSize(MWIDTH, MHEIGHT);
-    glutInitWindowPosition(10, 10);
+    glutInitWindowPosition(50, 100);
     glutCreateWindow("JelloSim by IDS6938 - UCF - Modeling & Simulation");
     glutDisplayFunc(onDrawCb);
     glutKeyboardFunc(onKeyboardCb);
