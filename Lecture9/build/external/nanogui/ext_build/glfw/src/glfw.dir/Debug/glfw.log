@@ -1,0 +1,3 @@
+﻿  Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/ext/glfw/src/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\ext_build\glfw\src\CMakeFiles\generate.stamp is up-to-date.
+  glfw.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\Debug\glfw3.lib

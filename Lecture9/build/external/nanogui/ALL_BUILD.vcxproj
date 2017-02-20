@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{7CEEACB9-05E4-3C8D-B10D-90D3E438366C}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\glad\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\eigen;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\glfw\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\nanovg\src;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\glad\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\eigen;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\glfw\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\nanovg\src;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\glad\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\eigen;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\glfw\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\nanovg\src;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\glad\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\eigen;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\glfw\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\ext\nanovg\src;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\include;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9 -BC:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build --check-stamp-file C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/CMakeLists.txt;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXSourceRuns.cmake;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9 -BC:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build --check-stamp-file C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/CMakeLists.txt;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXSourceRuns.cmake;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9 -BC:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build --check-stamp-file C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/CMakeLists.txt;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXSourceRuns.cmake;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HC:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9 -BC:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build --check-stamp-file C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/external/nanogui/CMakeLists.txt;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.7\Modules\CheckCXXSourceRuns.cmake;C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\external\nanogui\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Lecture9\build\external\nanogui\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build/ZERO_CHECK.vcxproj">
+      <Project>A7A315B7-2B13-365D-866B-40547B96F728</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build/external/nanogui/ext_build/glfw/src/glfw.vcxproj">
+      <Project>C0795FB6-B755-348C-A710-F5066DEFCED6</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build/external/nanogui/ext_build/glfw/src/glfw_objects.vcxproj">
+      <Project>0311FC95-1598-3ACA-88DA-F0E6BD699798</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build/external/nanogui/nanogui.vcxproj">
+      <Project>D1AA1E8F-6A6F-3FC8-9334-BF9E7A6D1F83</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Lecture9/build/external/nanogui/nanogui-obj.vcxproj">
+      <Project>A2B10A62-36EC-33BB-A341-755A5950E1B2</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
