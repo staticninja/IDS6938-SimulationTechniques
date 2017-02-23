@@ -135,6 +135,7 @@ Graph of error percentages of RK1, RK2, & RK4
 
 <p><strong>Step (e)</strong></p>
 Graph of varying step size and error
+
 Step	|	0.5	|	0.5 Error	|	1.0	|	1.0 Error	|	2.0	|	2.0 Error	|	Exact
 ------------- 	|	------------- 	|	------------- 	|	------------- 	|	------------- 	|	------------- 	|	------------- 	|	------------- 
 0.00	|	0.00	|	0.00	|	0.00	|	0.00	|	0.00	|	0.00	|	0.00
