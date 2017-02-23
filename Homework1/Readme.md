@@ -3,24 +3,35 @@
 
 
 ###<strong>Part 1:</strong>
-<p><strong>Step (a)</strong><br>
+<p>Step (a)<br>
 y(x) = e<sup>x/2</sup> * sin(5x)</p>
-<p><strong>Step (b)</strong><br>
-Function to return <i>df</i>
+<p>Step (b)</p>
+Function to return <strong>df</strong>
 <pre>double df(double x, double y)
 {
 	return y - (1.0 / 2.0)*exp(x / 2.0)*sin(5.0 * x) + 5 * exp(x / 2.0)*cos(5.0 * x);
 }
 </pre>
-Function to return <i>Exact</i>
+Function to return <strong>Exact</strong>
 <pre>
 double exact(double x)
 {
 	return exp(x / 2.0)*sin(5.0 * x);
 }
-</pre></p>
-<p><strong>Step (c)</strong></p>
-Graph of RK1, RK2, RK4, and the Exact Solutions
+</pre>
+<p>Step (c)</p>
+Graph of RK1, RK2, RK4, and the Exact Solutions. Changes
+![](images/PartC.eps?raw=true)
+
+The assignment is due: Monday, February 27 at 11:59PM (EST)
+
+| undeformed jello  | deformed jello |
+| ------------- | ------------- |
+| ![](images/undeformed3.png?raw=true)  | ![](images/deformed3.png?raw=true) |
+
+
+
+Something
 
 |      RK1      |      RK2      |      RK4      |     Exact     |
 | ------------- | ------------- | ------------- | ------------- |
@@ -126,58 +137,3 @@ Graph of RK1, RK2, RK4, and the Exact Solutions
 |	2674.851039	|	80.95594681	|  -97.93441991	|  -97.81800842	|
 |	2998.124017	|	158.7831645	|  -39.0670402	|  -38.93988091	|
 |				|				|				|
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/929c25f0/Homework1/images/PartC.svg)
-
-<p><strong>Step (d)</strong></p>
-Graph of error percentages of RK1, RK2, & RK4
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/a8f5d986/Homework1/images/PartD.svg)
-
-<p><strong>Step (e)</strong></p>
-Graph of varying step size and error
-
-Step	|	0.5	|	0.5 Error	|	1.0	|	1.0 Error	|	2.0	|	2.0 Error	|	Exact
-------------- 	|	------------- 	|	------------- 	|	------------- 	|	------------- 	|	------------- 	|	------------- 	|	------------- 
-0.00	|	0.00	|	0.00	|	0.00	|	0.00	|	0.00	|	0.00	|	0.00
-0.50	|	0.76	|	0.01	|		|		|		|		|	0.77
-1.00	|	-1.62	|	-0.02	|	-3.18	|	-1.01	|		|		|	-1.58
-1.50	|	1.99	|	0.00	|		|		|		|		|	1.99
-2.00	|	-1.56	|	-0.05	|	-6.04	|	-3.09	|	18.54	|	-13.54	|	-1.48
-2.50	|	-0.29	|	-0.24	|		|		|		|		|	-0.23
-3.00	|	2.81	|	0.04	|	-5.35	|	2.83	|		|		|	2.91
-3.50	|	-5.89	|	-0.05	|		|		|		|		|	-5.61
-4.00	|	6.53	|	0.03	|	-11.12	|	2.65	|	47.20	|	6.00	|	6.75
-4.50	|	-5.28	|	-0.14	|		|		|		|		|	-4.62
-5.00	|	-2.46	|	-0.53	|	-56.93	|	-34.31	|		|		|	-1.61
-5.50	|	9.54	|	0.13	|		|		|		|		|	10.94
-6.00	|	-22.55	|	-0.14	|	-188.39	|	-8.49	|	570.16	|	-29.73	|	-19.85
-6.50	|	19.15	|	0.16	|		|		|		|		|	22.80
-7.00	|	-21.21	|	-0.50	|	-469.35	|	-32.10	|		|		|	-14.18
-7.50	|	-19.24	|	-1.29	|		|		|		|		|	-8.41
-8.00	|	22.95	|	0.44	|	-1139.89	|	29.02	|	3507.78	|	85.22	|	40.68
-8.50	|	-100.56	|	-0.44	|		|		|		|		|	-69.83
-9.00	|	28.82	|	0.62	|	-3075.56	|	41.15	|		|		|	76.60
-9.50	|	-124.67	|	-1.94	|		|		|		|		|	-42.45
-10.00	|	-172.09	|	-3.42	|	-8675.56	|	-221.79	|	24987.81	|	-642.70	|	-38.94
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/0afd7dfa/Homework1/images/V5.svg)
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/0afd7dfa/Homework1/images/V1.svg)
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/0afd7dfa/Homework1/images/V2.svg)
-
-<p><strong>Step (f)</strong></p>
-Analyze your results:
-(1) Describe how varying the integration method changes the accuracy.
-(2) What happens as you increase the x value to the accuracy.
-(3) How does varying the step size effect the accuracy.
-(4) Which method is the most accurate and why (in particular explain what is taken to account in the solution)
-
-| undeformed jello  | deformed jello |
-| ------------- | ------------- |
-| ![](images/undeformed3.png?raw=true)  | ![](images/deformed3.png?raw=true) |
-
-
-
-Something
-
