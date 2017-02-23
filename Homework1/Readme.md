@@ -1,8 +1,27 @@
-#Homework 1 : The Jello Cube (Continuous Simulation Assignment
+#Homework 1 : The Jello Cube (Continuous Simulation Assignment)
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
 
-This is the framework for homework #1. Please first read the [homework writeup](HomeWork%231.pdf).
+###<strong>Part 1:</strong>
+<p>Step (a)<br>
+y(x) = e<sup>x/2</sup> * sin(5x)</p>
+<p>Step (b)</p>
+Function to return <strong>df</strong>
+<pre>double df(double x, double y)
+{
+	return y - (1.0 / 2.0)*exp(x / 2.0)*sin(5.0 * x) + 5 * exp(x / 2.0)*cos(5.0 * x);
+}
+</pre>
+Function to return <strong>Exact</strong>
+<pre>
+double exact(double x)
+{
+	return exp(x / 2.0)*sin(5.0 * x);
+}
+</pre>
+<p>Step (c)</p>
+Graph of RK1, RK2, RK4, and the Exact Solutions
+![](images/Part C.eps?raw=true)
 
 The assignment is due: Monday, February 27 at 11:59PM (EST)
 
@@ -117,4 +136,4 @@ Something
 |	2407.512568	|	33.91946812	|  -128.1856199	|  -128.0792336	|
 |	2674.851039	|	80.95594681	|  -97.93441991	|  -97.81800842	|
 |	2998.124017	|	158.7831645	|  -39.0670402	|  -38.93988091	|
-¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+|				|				|				|
