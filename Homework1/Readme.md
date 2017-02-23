@@ -21,6 +21,7 @@ double exact(double x)
 </pre></p>
 <p><strong>Step (c)</strong></p>
 Graph of RK1, RK2, RK4, and the Exact Solutions
+
 |      RK1      |      RK2      |      RK4      |     Exact     |
 | ------------- | ------------- | ------------- | ------------- |
 |   0           |   0           |   0           |   0           |
