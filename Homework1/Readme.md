@@ -21,7 +21,7 @@ double exact(double x)
 </pre>
 <p>Step (c)</p>
 Graph of RK1, RK2, RK4, and the Exact Solutions
-![](images/PartC.eps)
+![](images/PartC.svg)
 
 The assignment is due: Monday, February 27 at 11:59PM (EST)
 
