@@ -96,7 +96,7 @@ int main()
 	double y_midpoint = 0.0;
 	double y_RK4 = 0.0;
     double x = 0.0;
-    double h = 0.1;
+    double h = 2.0;
 
 	std::cout << std::fixed << std::showpoint;
     // Header information for column printouts
