@@ -4,7 +4,7 @@
 
 ###<strong>Part 1:</strong>
 <p><strong>Step (a)</strong><br>
-y(x) = e<sup>x/2</sup> * sin(5x)</p>
+<pre>y(x) = e<sup>x/2</sup> * sin(5x)</pre></p>
 <p><strong>Step (b)</strong><br>
 Function to return <i>df</i>
 <pre>double df(double x, double y)
@@ -169,15 +169,27 @@ Step	|	0.5	|	0.5 Error	|	1.0	|	1.0 Error	|	2.0	|	2.0 Error	|	Exact
 <p><strong>Step (f)</strong></p>
 Analyze your results:
 (1) Describe how varying the integration method changes the accuracy.
+<pre>Differences in Euler vs. Midpoint vs. RK4 are evident. When using Euler integration the accuracy begins to suffer rapidly and the cube shatters. Midpoint integration appears to be slower than RK4 but as reliable. RK4 is more accurate and the cube retains its structure. </pre>
 (2) What happens as you increase the x value to the accuracy.
+<pre>Answer</pre>
 (3) How does varying the step size effect the accuracy.
+<pre>Answer</pre>
 (4) Which method is the most accurate and why (in particular explain what is taken to account in the solution)
+<pre>RK4 is the most accurate as it includes Euler's method and RK</pre>
+###Part 2
+<pre>Part 2 can be found in the .cpp files.</pre>
+###Part 3
+<p>What is the effect of the K<sub>s</sub> and K<sub>d</sub> parameters on the jello?</p>
+<pre>K<sub>s</sub> represents spring stiffness constant and K<sub>d</sub> is the damping constant. Stiffness is the propensity of the connected particles to retain their original form, lowering the K<sub>s</sub> value allows for more deformation. Damping is how rapidly the spring will return to its original position. </pre>
+<p>What are the benefits and the drawbacks of the collision system used here? What different ways in which it could be improved?</p>
+<pre>Our collision system uses displacement to the interloping object to return it to the viable surface. A "better" solution would be to solve for the instant of contact with the surface and and rewind the simulation to the time of the collision.</pre>
+<p>What are some example systems you could model with Mass-spring simulation. Explain how you would construct the model.</p>
+<pre>Simulating hair can also be done using mass-spring simulations. To construct the model you would use a function to create the object of the hair and then at predetermined length "segment" the hair and apply springs at those points to create natural hair moments.</pre>
+<p>How would you model and simulate water (in terms of a continuous simulation)?</p>
+<pre>There are multiple ways of simulating water. Video games of yesteryear used animated 2D sprites and moving texture objects. Simulating water, in a system that isn't designed to evaluate the water, could be modeled in a polygon textured plane with multiple points of flexation that would be controlled via a mass-spring system.</pre>
+###Part 4
+<pre>This Readme.md is Part 4</pre>
 
-| undeformed jello  | deformed jello |
-| ------------- | ------------- |
-| ![](images/undeformed3.png?raw=true)  | ![](images/deformed3.png?raw=true) |
-
-
-
-Something
-
+| Working Jello Cube  | Ks Jello Breaks | Kd Jello Breaks |
+| ------------- | ------------- | -------------|
+| ![](images/Jello_Final.gif?raw=true)  | ![](images/Ks_Collapse.gif?raw=true) | ![](images/Kd_Shatter.gif?raw=true) |
