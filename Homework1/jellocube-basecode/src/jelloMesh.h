@@ -15,7 +15,7 @@ public:
     // Update our JelloMesh (handles collisions and forces)
     virtual void Update(double dt, 
         const World& world,
-        const vec3& externalForces = vec3(20.0, -9.8, 0)); //added wind
+        const vec3& externalForces = vec3(0, -9.8, 0));
 
     // Draw our JelloMesh
     virtual void Draw(const vec3& eyePos);

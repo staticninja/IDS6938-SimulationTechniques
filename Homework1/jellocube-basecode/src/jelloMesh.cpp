@@ -1,25 +1,28 @@
 #include "JelloMesh.h"
 #include <GL/glut.h>
 #include <algorithm>
+#include <cmath>
 
 // TODO
-double JelloMesh::g_structuralKs = 0.0; 
-double JelloMesh::g_structuralKd = 0.0; 
-double JelloMesh::g_attachmentKs = 0.0;
-double JelloMesh::g_attachmentKd = 0.0;
-double JelloMesh::g_shearKs = 0.0;
-double JelloMesh::g_shearKd = 0.0;
-double JelloMesh::g_bendKs = 0.0;
-double JelloMesh::g_bendKd = 0.0;
-double JelloMesh::g_penaltyKs = 0.0;
-double JelloMesh::g_penaltyKd = 0.0;
+double JelloMesh::g_structuralKs = 5000.0; 
+double JelloMesh::g_structuralKd = 10.0; 
+double JelloMesh::g_attachmentKs = 5000.0;
+double JelloMesh::g_attachmentKd = 10.0;
+double JelloMesh::g_shearKs = 5000.0;
+double JelloMesh::g_shearKd = 5000.0;
+double JelloMesh::g_bendKs = 5000.0;
+double JelloMesh::g_bendKd = 10.0;
+double JelloMesh::g_penaltyKs = 5000.0;
+double JelloMesh::g_penaltyKd = 5000.0;
+double epsilon = 0.1;
 
 JelloMesh::JelloMesh() :     
     m_integrationType(JelloMesh::RK4), m_drawflags(MESH | STRUCTURAL),
-    m_cols(0), m_rows(0), m_stacks(0), m_width(0.0), m_height(0.0), m_depth(0.0) //mesh_col, mesh_rows, mesh_width
+    m_cols(0), m_rows(0), m_stacks(0), m_width(0.0), m_height(0.0), m_depth(0.0) 
+	//mesh_col, mesh_rows, mesh_width
 {
     SetSize(1.0, 1.0, 1.0);
-    SetGridSize(6, 6, 6);
+    SetGridSize(12, 12, 12);
 }
 
 JelloMesh::~JelloMesh()
@@ -43,7 +46,8 @@ JelloMesh::Particle& JelloMesh::GetParticle(JelloMesh::ParticleGrid& grid, int i
     return GetParticle(grid, i,j,k);
 }
 
-const JelloMesh::Particle& JelloMesh::GetParticle(const JelloMesh::ParticleGrid& grid, int i, int j, int k) const
+const JelloMesh::Particle& JelloMesh::GetParticle
+(const JelloMesh::ParticleGrid& grid, int i, int j, int k) const
 {
     return grid[i][j][k];
 }
@@ -191,12 +195,36 @@ void JelloMesh::InitJelloMesh()
     {
         for (int j = 0; j < m_cols+1; j++)
         {
-            for (int k = 0; k < m_stacks+1; k++)
-            {
-                if (j < m_cols) AddStructuralSpring(GetParticle(g,i,j,k), GetParticle(g,i,j+1,k));
-                if (i < m_rows) AddStructuralSpring(GetParticle(g,i,j,k), GetParticle(g,i+1,j,k));
-                if (k < m_stacks) AddStructuralSpring(GetParticle(g,i,j,k), GetParticle(g,i,j,k+1));
-            }
+			for (int k = 0; k < m_stacks + 1; k++)
+			{
+				//Structural Springs
+				if (j < m_cols) AddStructuralSpring(GetParticle(g, i, j, k), GetParticle(g, i, j + 1, k));
+				if (i < m_rows) AddStructuralSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j, k));
+				if (k < m_stacks) AddStructuralSpring(GetParticle(g, i, j, k), GetParticle(g, i, j, k + 1));
+				//Bend Springs
+				if (i < m_rows - 1) AddBendSpring(GetParticle(g, i, j, k), GetParticle(g, i + 2, j, k));
+				if (j < m_cols - 1) AddBendSpring(GetParticle(g, i, j, k), GetParticle(g, i, j + 2, k));
+				if (k < m_stacks - 1) AddBendSpring(GetParticle(g, i, j, k), GetParticle(g, i, j, k + 2));
+				/* //I cant seem to get the shear springs set properly.
+				//Shear Springs
+				if (j < m_cols && i < m_rows) {
+					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j, k + 1));
+					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j + 1, k));
+					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i , j + 1, k + 1));
+				}
+				if (j > 0 && j < m_cols + 1 && i > 0 && i < m_rows + 1) {
+					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i - 1, j, k + 1));
+				}
+				if (j > 0 && j < m_cols + 1 && k > 0 && k < m_stacks + 1) {
+					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j , k + 1));
+					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j - 1, k));
+					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i, j - 1, k + 1));
+				}
+				if (i > 0 && i < m_rows + 1 && k > 0 && k < m_stacks + 1) {
+					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i - 1, j, k + 1));
+				}
+				*/
+			}
         }
     }
 
@@ -432,14 +460,34 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
     }
 
     // Update springs
-    for(unsigned int i = 0; i < m_vsprings.size(); i++)
-    {
-        Spring& spring = m_vsprings[i];
-        Particle& a = GetParticle(grid, spring.m_p1);
-        Particle& b = GetParticle(grid, spring.m_p2);
+	for (unsigned int i = 0; i < m_vsprings.size(); i++)
+	{
+		Spring& spring = m_vsprings[i];
+		Particle& a = GetParticle(grid, spring.m_p1);
+		Particle& b = GetParticle(grid, spring.m_p2);
 
-        // TODO
-    }
+		// TODO
+		//DONE!
+		double Ks = spring.m_Ks;
+		double Kd = spring.m_Kd;
+		double R = spring.m_restLen;
+		vec3 p_dif = b.position - a.position;
+		double mag = p_dif.Length();
+		vec3 norm_vec = p_dif / mag;
+		vec3 I = b.velocity - a.velocity;
+		//Hooke's Law:
+		//Fa = Fe + Fd
+		//Fe = -Ks * (|L| - R) * L/|L|
+		//Fd = -Kd * (i*L)/|L|*L\|L|
+		vec3 Fe = spring.m_Ks * (mag - R) * p_dif / mag;
+		vec3 Fd = -spring.m_Kd * (I*p_dif) / mag * p_dif / mag;
+		vec3 Fa = Fe + Fd;
+		if (mag - R != 0)
+		{
+			a.force += Fa;
+			b.force += -Fa;
+		}
+	}
 }
 
 void JelloMesh::ResolveContacts(ParticleGrid& grid)
@@ -449,8 +497,11 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
        const Intersection& contact = m_vcontacts[i];
        Particle& p = GetParticle(grid, contact.m_p);
        vec3 normal = contact.m_normal; 
-
+	   
         // TODO
+	   float r = 0.2;
+	   p.position = p.position + contact.m_distance *normal; //position post contact
+	   p.velocity += (-2 * (p.velocity*normal)*normal*r); //velocity post contact
     }
 }
 
@@ -463,38 +514,35 @@ void JelloMesh::ResolveCollisions(ParticleGrid& grid)
         vec3 normal = result.m_normal;
         float dist = result.m_distance;
         // TODO
+		if (pt.velocity * normal < 0)
+		{
+			pt.force += g_structuralKd * 
+				(dist * normal) + g_structuralKd * (pt.velocity * normal) * normal;
+		}
 	}
 }
 
 bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 {
-    // TODO
-	vec3 bubble(0.0, 1.0, 0.0);
-	vec3 cube(0.0, p.position[1], 0.0);
-
-	double loc = cube * bubble;
-
-	/*if (loc < 1)
+	// TODO
+	double loc = p.position[1];
+	if (loc < 0)
 	{
-		intersection.m_distance = loc;
-		intersection.m_normal = bubble;
 		intersection.m_p = p.index;
-		if (loc > 0)
-		{
-			intersection.m_type = JelloMesh::COLLISION;
-		}
-		else
-		{
-			intersection.m_type = JelloMesh::CONTACT;
-		}
+		intersection.m_type = COLLISION;
+		intersection.m_distance = -p.position[1];
+		intersection.m_normal = vec3(0, 1, 0);
 		return true;
 	}
-	else
+	if (loc < epsilon && loc >= 0)
 	{
-
+		intersection.m_p = p.index;
+		intersection.m_type = CONTACT;
+		intersection.m_distance = epsilon - loc;
+		intersection.m_normal = vec3(0, 1, 0);
 		return true;
-	}*/
-    return false;
+	}
+	return false;
 }
 
 bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder, 
@@ -1075,6 +1123,3 @@ bool JelloMesh::FaceMesh::compare(const FaceMesh& one, const FaceMesh& other)
 {
     return one.distToEye > other.distToEye;
 }
-
-
-
