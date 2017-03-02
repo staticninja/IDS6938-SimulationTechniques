@@ -6,14 +6,14 @@
 // TODO
 double JelloMesh::g_structuralKs = 5000.0; 
 double JelloMesh::g_structuralKd = 10.0; 
-double JelloMesh::g_attachmentKs = 5000.0;
+double JelloMesh::g_attachmentKs = 10.0;
 double JelloMesh::g_attachmentKd = 10.0;
 double JelloMesh::g_shearKs = 5000.0;
-double JelloMesh::g_shearKd = 5000.0;
-double JelloMesh::g_bendKs = 5000.0;
+double JelloMesh::g_shearKd = 10.0;
+double JelloMesh::g_bendKs = 4000.0;
 double JelloMesh::g_bendKd = 10.0;
-double JelloMesh::g_penaltyKs = 5000.0;
-double JelloMesh::g_penaltyKd = 5000.0;
+double JelloMesh::g_penaltyKs = 10.0;
+double JelloMesh::g_penaltyKd = 10.0;
 double epsilon = 0.1;
 
 JelloMesh::JelloMesh() :     
@@ -205,25 +205,19 @@ void JelloMesh::InitJelloMesh()
 				if (i < m_rows - 1) AddBendSpring(GetParticle(g, i, j, k), GetParticle(g, i + 2, j, k));
 				if (j < m_cols - 1) AddBendSpring(GetParticle(g, i, j, k), GetParticle(g, i, j + 2, k));
 				if (k < m_stacks - 1) AddBendSpring(GetParticle(g, i, j, k), GetParticle(g, i, j, k + 2));
-				/* //I cant seem to get the shear springs set properly.
+				//Wohoo!!! I finally figured out shear springs!!!
+				//Ok that may have been a bit premature. I've got thtem not throwing an error now but they shatter the cube... I'm not certain why.
+				
 				//Shear Springs
-				if (j < m_cols && i < m_rows) {
-					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j, k + 1));
-					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j + 1, k));
-					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i , j + 1, k + 1));
-				}
-				if (j > 0 && j < m_cols + 1 && i > 0 && i < m_rows + 1) {
-					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i - 1, j, k + 1));
-				}
-				if (j > 0 && j < m_cols + 1 && k > 0 && k < m_stacks + 1) {
-					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j , k + 1));
-					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j - 1, k));
-					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i, j - 1, k + 1));
-				}
-				if (i > 0 && i < m_rows + 1 && k > 0 && k < m_stacks + 1) {
-					AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i - 1, j, k + 1));
-				}
-				*/
+				//Front & Back
+				if (j < m_cols && i < m_rows) AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j + 1, k)); //A
+				if (j > 0 && i < m_rows && k < m_stacks) AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j - 1, k)); //B
+				//Left & Right
+				if (k < m_stacks && j < m_cols)	AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i, j + 1, k + 1));//D
+				if (j > 0 && j < m_cols + 1 && k < m_stacks) AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i, j - 1, k + 1)); //C
+				//Top & Bottom
+				if (i < m_rows && k < m_stacks)	AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i + 1, j, k + 1)); //e
+				if (i > 0 && k < m_stacks && i < m_rows + 1) AddShearSpring(GetParticle(g, i, j, k), GetParticle(g, i - 1, j, k + 1)); //f
 			}
         }
     }
@@ -468,7 +462,7 @@ void JelloMesh::ComputeForces(ParticleGrid& grid)
 
 		// TODO
 		//DONE!
-		double Ks = spring.m_Ks;
+		double Ks = spring.m_Ks; //
 		double Kd = spring.m_Kd;
 		double R = spring.m_restLen;
 		vec3 p_dif = b.position - a.position;
@@ -501,7 +495,7 @@ void JelloMesh::ResolveContacts(ParticleGrid& grid)
         // TODO
 	   float r = 0.2;
 	   p.position = p.position + contact.m_distance *normal; //position post contact
-	   p.velocity += (-2 * (p.velocity*normal)*normal*r); //velocity post contact
+	   p.force += (-2 * (p.force*normal)*normal*r); //velocity post contact
     }
 }
 
@@ -529,7 +523,7 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 	if (loc < 0)
 	{
 		intersection.m_p = p.index;
-		intersection.m_type = COLLISION;
+		intersection.m_type = CONTACT;
 		intersection.m_distance = -p.position[1];
 		intersection.m_normal = vec3(0, 1, 0);
 		return true;
@@ -537,7 +531,7 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 	if (loc < epsilon && loc >= 0)
 	{
 		intersection.m_p = p.index;
-		intersection.m_type = CONTACT;
+		intersection.m_type = COLLISION;
 		intersection.m_distance = epsilon - loc;
 		intersection.m_normal = vec3(0, 1, 0);
 		return true;
@@ -545,15 +539,23 @@ bool JelloMesh::FloorIntersection(Particle& p, Intersection& intersection)
 	return false;
 }
 
-bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder, 
-                                 JelloMesh::Intersection& result)
+bool JelloMesh::CylinderIntersection(Particle& p, World::Cylinder* cylinder,
+	JelloMesh::Intersection& result)
 {
-    vec3 cylinderStart = cylinder->start;
-    vec3 cylinderEnd = cylinder->end;
-    vec3 cylinderAxis = cylinderEnd - cylinderStart;
-    double cylinderRadius = cylinder->r; 
+	vec3 cylinderStart = cylinder->start;
+	vec3 cylinderEnd = cylinder->end;
+	vec3 cylinderAxis = cylinderEnd - cylinderStart;
+	double cylinderRadius = cylinder->r;
+	// TODO
+	//bounding box, need
+	double x1 = p.position[1];
+	double x2;
+	int run = 1; //is the cube moving?
+	for (int i = 0; i < run; i++)
+	{
+		//if
+	};
 
-    // TODO
     return false;
 }
 //Begin Homework Section 2: Forward Euler, Midpoint Integration, and RK4

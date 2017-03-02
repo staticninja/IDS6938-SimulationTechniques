@@ -1,3 +1,4 @@
 ﻿  jelloMesh.cpp
-C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework1\jellocube-basecode\src\jelloMesh.cpp(282): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework1\jellocube-basecode\src\jelloMesh.cpp(276): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework1\jellocube-basecode\src\jelloMesh.cpp(552): warning C4101: 'x2': unreferenced local variable
   jello.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework1\jellocube-basecode\BUILD\Debug\jello.exe
