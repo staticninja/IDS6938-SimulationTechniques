@@ -14,6 +14,7 @@
 #define MHEIGHT 720
 
 JelloMesh theJello;
+World theCylinder("../worlds/cylinders.xml");
 Camera theCamera;
 World theWorld("../worlds/ground.xml");
 mmc::FpsTracker theFpsTracker;
@@ -271,6 +272,7 @@ void onDrawCb()
 
     theWorld.Draw();
     theJello.Draw(cpos);
+	theCylinder.Draw();
     drawOverlay();
     glutSwapBuffers();
 }

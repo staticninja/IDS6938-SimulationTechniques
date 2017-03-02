@@ -193,6 +193,13 @@ Analyze your results:
 ###"Extra Credit"
 | Working Jello Cube  | Ks Jello Breaks | Kd Jello Breaks |
 | ------------- | ------------- | -------------|
-| ![](images/Jello_Final.gif?raw=true)  | ![](images/Ks_Collapse.gif?raw=true) | ![](images/Kd_Shatter.gif?raw=true) |
+| ![](images/J>
+llo_Final.gif?raw=true)  | ![](images/Ks_Collapse.gif?raw=true) | ![](images/Kd_Shatter.gif?raw=true) |
 
 <a href="https://youtu.be/RjrGHmRmPd4">YouTube Link to a video of the Jello Cube Final</a>
+###References
+The following GitHub accounts were used as reference and were instrumental in deciphering portions of the Jello Cube Framework. Code development was conducted in a way to reduce the possibility of copied, plagiarized, or derivative work.
+shijingliu
+Jing-Qiu
+mriveralee
+zimengy
