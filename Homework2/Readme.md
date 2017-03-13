@@ -1,4 +1,4 @@
-#Homework 2 :  Discrete-Event Simulation Assignment
+	#Homework 2 :  Discrete-Event Simulation Assignment
 
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
@@ -96,7 +96,7 @@ When a passanger arrives they have to wait in a queue to present their ID and ti
   * expected waiting time
   * expected response time 
 *  **(d) - 4pts:** Write code to call the functions to output and generate data from the airport senario. Plot and analyze the useful statistics/results in the program of your choice.  (Hint -  basically call  *.output();* on the MM1_Queue objects you create. Hint2 - two other use functions are *get_current_time()* and  *plot_results_output()* call intially on your intial MM1_Queue object.)  
-* **(e) - 15pts:** Download the personal edition of **[Anylogic](http://www.anylogic.com/)**, read through the [documentation](http://www.anylogic.com/learn-simulation) as needed, and set up the same type of simulation discussed above.
+* **(e) - 15pts:** Download the personal edition of **[Anylogic](http://www.anylogic.com/)**, read through the [documentation](http://www.anylogic.com/learn-simulation) as needed, and set up the same type of simulation discussed above. (trap!!)
 
 
 ##Part 4 - Implementing Extra Features (10 pts)

@@ -12,7 +12,7 @@
 //#include <fstream>
 
 
-std::mt19937_64 rng;
+std::knuth_b rng;
 std::uniform_real_distribution<double> unif;
 
 bool IntializeRandom(double lower, double upper)
@@ -38,8 +38,8 @@ bool IntializeRandom(double lower, double upper)
 int main()
 {
 
-	IntializeRandom(0.0, 1.0);
-    unsigned int range = 30;
+	IntializeRandom(0.0, 100.0);
+    unsigned int range = 1000;
 
 	//std::ofstream myfile;
 
