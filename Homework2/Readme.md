@@ -1,41 +1,39 @@
-#Homework 2 : Snakes and Ladders (Discrete Simulation Assignment)
+# Homework 2 : Snakes and Ladders (Discrete Simulation Assignment)
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
 
-##**Part 1 - Emperical Tests of Randomness**
-###(a)
+## **Part 1 - Emperical Tests of Randomness**
+
+### (a)
 <pre>The out put of 5 random number generator (RNG) engines:
 https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output.xlsx</pre>
 
 <pre>Charts to analyse how uniform the random numbers are.</pre>
-<center>**Default Random Engine**</center>
+<br>
+
+**Default Random Engine**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Default.svg)
-
 <br>
 
-<center>**Knuth-B Generator**</center>
+**Knuth-B Generator**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Knuth.svg)
-
 <br>
 
-<center>**Minimal Standard**</center>
+**Minimal Standard**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/MinStand.svg)
-
 <br>
 
-<center>**Ranlux 48**</center>
+**Ranlux 48**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Ranlux.svg)
-
 <br>
 
-<center>**Mersene Twister 19937 generator (64 bit)**</center>
+**Mersene Twister 19937 generator (64 bit)**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Twister.svg)
-
 <br>
 
 
@@ -72,8 +70,10 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 
 
-<pre>Statistics to analyze RNG output</pre>
-<center>**Spearman's Rank Correlation Coefficient**</center>
+<pre>Statistics to analyze RNG outputs</pre>
+
+**Spearman's Rank Correlation Coefficient**
+
 |	N = 1,000		|						|	Default		|	Knuth			|	MinStand		|	Ranlux			|	Twister			|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
 |	**Default**	|	Correlation Coefficient	|	1.000	|	.018	|	-.008	|	-.022	|	.003	|
@@ -88,7 +88,8 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 |		|	Sig. (2-tailed)	|	.932	|	.194	|	.940	|	.980	|		|
 <br>
 
-<center>**One-Sample Kolmogorov-Smirnov Test**</center>
+**One-Sample Kolmogorov-Smirnov Test**
+
 |		|		|	Default	|	Knuth	|	MinStand	|	Ranlux	|	Twister	|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
 |	N	|		|	1000	|	1000	|	1000	|	1000	|	1000	|
@@ -103,22 +104,39 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 |	^.Calculated from data.	|		|		|		|		|		|		|
 |	c.Lilliefors Sig. Correction.	|		|		|		|		|		|		|
 
-###(b)
+### (b)
 
-###(c)
+<pre>Statistics to analyze distribution outputs</pre>
 
-###(d)
+**Spearman's Rank Correlation Coefficient**
+|	N = 100,000	|		|	Uniform	|	Normal	|	Poisson	|	Exponent	|	Weibull	|
+|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
+|	Uniform	|	Correlation Coefficient	|	1.000	|	.001	|	-.002	|	-.005	|	-.005	|
+|		|	Sig. (2-tailed)	|		|	.760	|	.567	|	.106	|	.098	|
+|	Normal	|	Correlation Coefficient	|	.001	|	1.000	|	.001	|	-.002	|	.004	|
+|		|	Sig. (2-tailed)	|	.760	|		|	.668	|	.444	|	.170	|
+|	Poisson	|	Correlation Coefficient	|	-.002	|	.001	|	1.000	|	.005	|	.002	|
+|		|	Sig. (2-tailed)	|	.567	|	.668	|		|	.098	|	.534	|
+|	Exponent	|	Correlation Coefficient	|	-.005	|	-.002	|	.005	|	1.000	|	-.001	|
+|		|	Sig. (2-tailed)	|	.106	|	.444	|	.098	|		|	.774	|
+|	Weibull	|	Correlation Coefficient	|	-.005	|	.004	|	.002	|	-.001	|	1.000	|
+|		|	Sig. (2-tailed)	|	.098	|	.170	|	.534	|	.774	|		|
 
-###(e)
 
-###(f)
+### (c)
 
-###Part 2 - Snakes and Ladders - Discrete Event Markov Chains and Monte Carlo Simulations
+### (d)
 
-###Part 3 - Discrete Event Simulation - Queue Simulation
+### (e)
 
-###Part 4 - Extra Features
+### (f)
 
-###Part 5 - Final Report
+### Part 2 - Snakes and Ladders - Discrete Event Markov Chains and Monte Carlo Simulations
 
-###References
+### Part 3 - Discrete Event Simulation - Queue Simulation
+
+### Part 4 - Extra Features
+
+### Part 5 - Final Report
+
+### References
