@@ -109,6 +109,7 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 <pre>Statistics to analyze distribution outputs</pre>
 
 **Spearman's Rank Correlation Coefficient**
+
 |	N = 100,000	|		|	Uniform	|	Normal	|	Poisson	|	Exponent	|	Weibull	|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
 |	Uniform	|	Correlation Coefficient	|	1.000	|	.001	|	-.002	|	-.005	|	-.005	|
