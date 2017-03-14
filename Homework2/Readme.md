@@ -129,13 +129,14 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 |		|		|	Uniform	|	Normal	|	Poisson	|	Exponent	|	Weibull	|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
 |	N	|		|	100000	|	100000	|	100000	|	100000	|	100000	|
-|	Normal Parametersa,b	|	Mean	|	50.0327	|	50.0298	|	3.9978	|	1.0043	|	.9998	|
+|	Normal Parameters a,b	|	Mean	|	50.0327	|	50.0298	|	3.9978	|	1.0043	|	.9998	|
 |		|	Std. Deviation	|	28.86395	|	9.99737	|	1.99738	|	.99915	|	1.00365	|
 |	Most Extreme Differences	|	Absolute	|	.058	|	.003	|	.128	|	.157	|	.160	|
 |		|	Positive	|	.058	|	.003	|	.128	|	.133	|	.135	|
 |		|	Negative	|	-.058	|	-.001	|	-.070	|	-.157	|	-.160	|
 |	Test Statistic	|		|	.058	|	.003	|	.128	|	.157	|	.160	|
 |	Asymp. Sig. (2-tailed)	|		|	.000c	|	.045c	|	.000c	|	.000c	|	.000c	|
+|		|		|		|		|		|		|		|
 |	a. Test distribution is Normal.	|		|		|		|		|		|		|
 |	b. Calculated from data.	|		|		|		|		|		|		|
 |	c. Lilliefors Significance Correction.	|		|		|		|		|		|		|
