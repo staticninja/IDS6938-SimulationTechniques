@@ -112,15 +112,15 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 |	N = 100,000	|		|	Uniform	|	Normal	|	Poisson	|	Exponent	|	Weibull	|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
-|	**Uniform	|	Correlation Coefficient	|	1.000	|	.001	|	-.002	|	-.005	|	-.005	|
+|	**Uniform**	|	Correlation Coefficient	|	1.000	|	.001	|	-.002	|	-.005	|	-.005	|
 |		|	Sig. (2-tailed)	|		|	.760	|	.567	|	.106	|	.098	|
-|	**Normal	|	Correlation Coefficient	|	.001	|	1.000	|	.001	|	-.002	|	.004	|
+|	**Normal**	|	Correlation Coefficient	|	.001	|	1.000	|	.001	|	-.002	|	.004	|
 |		|	Sig. (2-tailed)	|	.760	|		|	.668	|	.444	|	.170	|
-|	**Poisson	|	Correlation Coefficient	|	-.002	|	.001	|	1.000	|	.005	|	.002	|
+|	**Poisson**	|	Correlation Coefficient	|	-.002	|	.001	|	1.000	|	.005	|	.002	|
 |		|	Sig. (2-tailed)	|	.567	|	.668	|		|	.098	|	.534	|
-|	**Exponent	|	Correlation Coefficient	|	-.005	|	-.002	|	.005	|	1.000	|	-.001	|
+|	**Exponent**	|	Correlation Coefficient	|	-.005	|	-.002	|	.005	|	1.000	|	-.001	|
 |		|	Sig. (2-tailed)	|	.106	|	.444	|	.098	|		|	.774	|
-|	**Weibull	|	Correlation Coefficient	|	-.005	|	.004	|	.002	|	-.001	|	1.000	|
+|	**Weibull**	|	Correlation Coefficient	|	-.005	|	.004	|	.002	|	-.001	|	1.000	|
 |		|	Sig. (2-tailed)	|	.098	|	.170	|	.534	|	.774	|		|
 
 
