@@ -111,14 +111,14 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 ### (e)
 
-###(f)
+### (f)
 
-###Part 2 - Snakes and Ladders - Discrete Event Markov Chains and Monte Carlo Simulations
+### Part 2 - Snakes and Ladders - Discrete Event Markov Chains and Monte Carlo Simulations
 
-###Part 3 - Discrete Event Simulation - Queue Simulation
+### Part 3 - Discrete Event Simulation - Queue Simulation
 
-###Part 4 - Extra Features
+### Part 4 - Extra Features
 
-###Part 5 - Final Report
+### Part 5 - Final Report
 
-###References
+### References
