@@ -70,7 +70,9 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 
 <pre>Statistics to analyze RNG output</pre>
+
 <center>**Spearman's Rank Correlation Coefficient**</center>
+
 |	N = 1,000		|						|	Default		|	Knuth			|	MinStand		|	Ranlux			|	Twister			|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
 |	**Default**	|	Correlation Coefficient	|	1.000	|	.018	|	-.008	|	-.022	|	.003	|
