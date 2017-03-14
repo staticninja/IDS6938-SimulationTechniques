@@ -72,7 +72,7 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 <pre>Statistics to analyze RNG output</pre>
 
-<center>**Spearman's Rank Correlation Coefficient**</center>
+**Spearman's Rank Correlation Coefficient**
 
 |	N = 1,000		|						|	Default		|	Knuth			|	MinStand		|	Ranlux			|	Twister			|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
@@ -88,7 +88,8 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 |		|	Sig. (2-tailed)	|	.932	|	.194	|	.940	|	.980	|		|
 <br>
 
-<center>**One-Sample Kolmogorov-Smirnov Test**</center>
+**One-Sample Kolmogorov-Smirnov Test**
+
 |		|		|	Default	|	Knuth	|	MinStand	|	Ranlux	|	Twister	|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
 |	N	|		|	1000	|	1000	|	1000	|	1000	|	1000	|
