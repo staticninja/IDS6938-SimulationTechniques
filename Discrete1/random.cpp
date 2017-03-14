@@ -11,8 +11,15 @@
 
 //#include <fstream>
 
+//Start your RNG Engines!!!
+//std::default_random_engine rng;
+//std::knuth_b rng;
+//std::minstd_rand rng;
+//std::ranlux48 rng;
+std::mt19937_64 rng;
 
-std::knuth_b rng;
+
+
 std::uniform_real_distribution<double> unif;
 
 bool IntializeRandom(double lower, double upper)
@@ -39,7 +46,7 @@ int main()
 {
 
 	IntializeRandom(0.0, 100.0);
-    unsigned int range = 1000;
+    unsigned int range = 10;
 
 	//std::ofstream myfile;
 
