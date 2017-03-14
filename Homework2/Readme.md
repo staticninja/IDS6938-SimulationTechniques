@@ -9,22 +9,27 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 <pre>Charts to analyse how uniform the random numbers are.</pre>
 <center>**Default Random Engine**</center>
+
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Default.svg)
 <br>
 
 <center>**Knuth-B Generator**</center>
+
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Knuth.svg)
 <br>
 
 <center>**Minimal Standard**</center>
+
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/MinStand.svg)
 <br>
 
 <center>**Ranlux 48**</center>
+
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Ranlux.svg)
 <br>
 
 <center>**Mersene Twister 19937 generator (64 bit)**</center>
+
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Twister.svg)
 <br>
 
