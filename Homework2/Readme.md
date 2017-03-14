@@ -106,6 +106,10 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 ### (b)
 
+When changing the number of values output from a RNG from 10, 100, and 1000 the randomness seems to increase from 10 to 100 and then patterns start to emerge once you reach 1000.
+
+### (c)
+
 <pre>Charts to analyse the different distributions.</pre>
 <br>
 
@@ -159,8 +163,6 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 |	b. Calculated from data.	|		|		|		|		|		|		|
 |	c. Lilliefors Significance Correction.	|		|		|		|		|		|		|
 
-
-### (c)
 
 ### (d)
 
