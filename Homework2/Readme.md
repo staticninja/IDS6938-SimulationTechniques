@@ -147,6 +147,7 @@ When changing the number of values output from a RNG from 10, 100, and 1000 the 
 |		|	Sig. (2-tailed)	|	.098	|	.170	|	.534	|	.774	|		|
 
 <br>
+
 **One-Sample Kolmogorov-Smirnov Test**
 
 |		|		|	Uniform	|	Normal	|	Poisson	|	Exponent	|	Weibull	|
