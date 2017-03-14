@@ -106,6 +106,25 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 ### (b)
 
+<pre>Charts to analyse the different distributions.</pre>
+<br>
+
+**Uniform**
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/98f87e9c/Homework2/images/Uniform.svg)
+
+**Normal**
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/98f87e9c/Homework2/images/Normal.svg)
+
+**Poisson**
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/98f87e9c/Homework2/images/Poisson.svg)
+
+**Exponent**
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/98f87e9c/Homework2/images/Exponental.svg)
+
+**Weibull**
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/98f87e9c/Homework2/images/Weibull.svg)
+<br>
+
 <pre>Statistics to analyze distribution outputs</pre>
 
 **Spearman's Rank Correlation Coefficient**
