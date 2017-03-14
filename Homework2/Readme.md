@@ -8,34 +8,31 @@
 https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output.xlsx</pre>
 
 <pre>Charts to analyse how uniform the random numbers are.</pre>
-<center>**Default Random Engine**</center>
+<br>
+
+**Default Random Engine**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Default.svg)
-
 <br>
 
-<center>**Knuth-B Generator**</center>
+**Knuth-B Generator**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Knuth.svg)
-
 <br>
 
-<center>**Minimal Standard**</center>
+**Minimal Standard**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/MinStand.svg)
-
 <br>
 
-<center>**Ranlux 48**</center>
+**Ranlux 48**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Ranlux.svg)
-
 <br>
 
-<center>**Mersene Twister 19937 generator (64 bit)**</center>
+**Mersene Twister 19937 generator (64 bit)**
 
 ![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Twister.svg)
-
 <br>
 
 
