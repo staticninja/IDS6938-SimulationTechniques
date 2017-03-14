@@ -136,7 +136,6 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 |		|	Negative	|	-.058	|	-.001	|	-.070	|	-.157	|	-.160	|
 |	Test Statistic	|		|	.058	|	.003	|	.128	|	.157	|	.160	|
 |	Asymp. Sig. (2-tailed)	|		|	.000c	|	.045c	|	.000c	|	.000c	|	.000c	|
-|		|		|		|		|		|		|		|
 |	a. Test distribution is Normal.	|		|		|		|		|		|		|
 |	b. Calculated from data.	|		|		|		|		|		|		|
 |	c. Lilliefors Significance Correction.	|		|		|		|		|		|		|

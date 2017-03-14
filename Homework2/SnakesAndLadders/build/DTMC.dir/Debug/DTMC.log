@@ -1,0 +1,6 @@
+﻿  Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Homework2/SnakesAndLadders/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\SnakesAndLadders\build\CMakeFiles\generate.stamp is up-to-date.
+  markov.cpp
+  test_dtmc.cpp
+  Generating Code...
+  DTMC.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\SnakesAndLadders\build\Debug\DTMC.exe
