@@ -1,9 +1,10 @@
-#Homework 2 : Snakes and Ladders (Discrete Simulation Assignment)
+# Homework 2 : Snakes and Ladders (Discrete Simulation Assignment)
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
 
-##**Part 1 - Emperical Tests of Randomness**
-###(a)
+## **Part 1 - Emperical Tests of Randomness**
+
+### (a)
 <pre>The out put of 5 random number generator (RNG) engines:
 https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output.xlsx</pre>
 
@@ -102,13 +103,13 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 |	^.Calculated from data.	|		|		|		|		|		|		|
 |	c.Lilliefors Sig. Correction.	|		|		|		|		|		|		|
 
-###(b)
+### (b)
 
-###(c)
+### (c)
 
-###(d)
+### (d)
 
-###(e)
+### (e)
 
 ###(f)
 
