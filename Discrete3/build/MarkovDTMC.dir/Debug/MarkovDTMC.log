@@ -1,0 +1,8 @@
+﻿  Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Discrete3/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Discrete3\build\CMakeFiles\generate.stamp is up-to-date.
+  markov.cpp
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Discrete3\markov.cpp(49): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Discrete3\markov.cpp(129): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
+  MarkovDTMC.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Discrete3\build\Debug\MarkovDTMC.exe
