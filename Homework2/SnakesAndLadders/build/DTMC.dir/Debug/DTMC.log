@@ -1,6 +1,25 @@
-﻿  Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Homework2/SnakesAndLadders/CMakeLists.txt
-  CMake does not need to re-run because C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\SnakesAndLadders\build\CMakeFiles\generate.stamp is up-to-date.
-  markov.cpp
-  test_dtmc.cpp
-  Generating Code...
+﻿  test_dtmc.cpp
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(24): warning C4551: function call missing argument list
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(39): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(40): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(50): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(55): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(59): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   DTMC.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\SnakesAndLadders\build\Debug\DTMC.exe
