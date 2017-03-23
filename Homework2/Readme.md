@@ -11,29 +11,12 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 <pre>Charts to analyse how uniform the random numbers are.</pre>
 <br>
 
-**Default Random Engine**
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/Default.svg)
-<br>
-
-**Knuth-B Generator**
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/Knuth.svg)
-<br>
-
-**Minimal Standard**
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/MinStand.svg)
-<br>
-
-**Ranlux 48**
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/Ranlux.svg)
-<br>
-
-**Mersene Twister 19937 generator (64 bit)**
-
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/Twister.svg)
+| | | Default Random Engine | Kunth-B | Ranlux 48 | Mersene Twister 19937 (64-bit) | Sobel |
+|----------|----------|----------|----------|----------|
+|n = 250 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Default_250.svg" width="250px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_250.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/240ae4ce/Homework2/images/Ranlux_250.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_250.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Sobol_250.svg" width="250px"> | 
+| n = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Default_1k.svg" width="250px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_1k.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_1k.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_1k.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Sobol_1k.svg" height="250px"> |
+| n = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Default_2.5k.svg" width="250px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_2.5k.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_2.5k.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_2.5k.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Sobol_2.5k.svg" width="250px"> |
+| n = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Default_Pole.svg" width="250px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_Pole.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_Pole.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_Pole.svg" width="250px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Sobol_Pole.svg" width="250px"> |
 <br>
 
 
