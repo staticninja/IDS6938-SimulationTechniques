@@ -13,27 +13,27 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 **Default Random Engine**
 
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Default.svg)
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/Default.svg)
 <br>
 
 **Knuth-B Generator**
 
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Knuth.svg)
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/Knuth.svg)
 <br>
 
 **Minimal Standard**
 
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/MinStand.svg)
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/MinStand.svg)
 <br>
 
 **Ranlux 48**
 
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Ranlux.svg)
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/Ranlux.svg)
 <br>
 
 **Mersene Twister 19937 generator (64 bit)**
 
-![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b45808c9/Homework2/images/Twister.svg)
+![](https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/7d67d7a1/Homework2/images/Twister.svg)
 <br>
 
 
