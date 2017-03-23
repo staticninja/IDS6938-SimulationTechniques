@@ -31,7 +31,6 @@ int main() {
 	for (unsigned int i = 0; i < N; ++i) {
 		
 		//TODO (add DTMC, and histogram lines.)
-		v = v.transpose() * TransitionMatrix; //formula from piazza and Dr. Kider.
 		DTMC(v, ROLLS, start); //I'm not sure where I was going with this.
 
 		// Code if you wanted to print out results at each step

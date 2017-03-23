@@ -18,11 +18,10 @@ int main()
 	std::random_device rd;
 
 	// 1) Change random number generators
-	//std::default_random_engine engine(rd());
+	std::default_random_engine engine(rd());
 	//std::knuth_b engine(rd());
-	//std::minstd_rand engine(rd());
 	//std::ranlux48 engine(rd());
-	std::mt19937_64 engine(rd());
+	//std::mt19937_64 engine(rd());
 
 
 	// Another seed intialization routine (this is just here for future reference for you.)
@@ -35,11 +34,11 @@ int main()
 	
 
 	//  2) - Change distribution types
-	//std::uniform_real_distribution<> dist(0, 100);  //Uniform distribution
+	std::uniform_real_distribution<> dist(0, 100);  //Uniform distribution
 	//std::normal_distribution<> dist(50,10);    //Normal distribution
 	//std::poisson_distribution<> dist(4); //Poisson Distribution
 	//std::exponential_distribution<> dist(1); //Exponential Distribution
-	std::weibull_distribution<> dist; //Weibull Distribution
+	//std::weibull_distribution<> dist; //Weibull Distribution
 
 
 
