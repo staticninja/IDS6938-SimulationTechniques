@@ -1,0 +1,3 @@
+C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Homework2/queues/builds/CMakeFiles/MM1.dir
+C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Homework2/queues/builds/CMakeFiles/ALL_BUILD.dir
+C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Homework2/queues/builds/CMakeFiles/ZERO_CHECK.dir

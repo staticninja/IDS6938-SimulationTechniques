@@ -46,9 +46,8 @@ int main()
 	uint64_t timeSeed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
 	std::seed_seq ss{ uint32_t(timeSeed & 0xffffffff), uint32_t(timeSeed >> 32) };
 	// 2 different ways to get a random starting seed
-	//seed = rd();
+	seed = 2251740;
 	//seed = ss;
-
 
 
 	// 3) Play with N
@@ -71,8 +70,8 @@ int main()
 		//std::cout << std::fixed << std::setprecision(1) << std::setw(2)
 		//	<< p.first << " -  "<< p.second << std::endl;
 
-		std::cout << std::fixed << std::setprecision(1) << std::setw(2)
-			<< p.first << "  " << std::string(p.second / (N / 500), '*') << std::endl;
+		//std::cout << std::fixed << std::setprecision(1) << std::setw(2)
+			//<< p.first << "  " << std::string(p.second / (N / 500), '*') << std::endl;
 
 	}
 

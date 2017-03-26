@@ -18,10 +18,10 @@ int main()
 	std::random_device rd;
 
 	// 1) Change random number generators
-	std::default_random_engine engine(rd());
+	//std::default_random_engine engine(rd());
 	//std::knuth_b engine(rd());
 	//std::ranlux48 engine(rd());
-	//std::mt19937_64 engine(rd());
+	std::mt19937_64 engine(rd());
 
 
 	// Another seed intialization routine (this is just here for future reference for you.)
@@ -34,18 +34,18 @@ int main()
 	
 
 	//  2) - Change distribution types
-	std::uniform_real_distribution<> dist(0, 100);  //Uniform distribution
+	//std::uniform_real_distribution<> dist(0, 100);  //Uniform distribution
 	//std::normal_distribution<> dist(50,10);    //Normal distribution
 	//std::poisson_distribution<> dist(4); //Poisson Distribution
 	//std::exponential_distribution<> dist(1); //Exponential Distribution
-	//std::weibull_distribution<> dist; //Weibull Distribution
+	std::weibull_distribution<> dist; //Weibull Distribution
 
 
 
 	auto generator = std::bind(dist, engine);
 
 	// 3) Play with N
-	unsigned int N = 100000;  // number of values generated
+	unsigned int N = 1000;  // number of values generated
 	double randomValue;
 	std::map<int, int> hist; //Counts of discrete values
 	std::vector<double> raw; //raw random values 
@@ -64,8 +64,8 @@ int main()
 		//std::cout << std::fixed << std::setprecision(1) << std::setw(2)
 		//	<< p.first << " -  "<< p.second << std::endl;
 
-		std::cout << std::fixed << std::setprecision(1) << std::setw(2)
-			<< p.first << "  " << std::string(p.second / (N/500), '*') << std::endl;
+		//std::cout << std::fixed << std::setprecision(1) << std::setw(2)
+			//<< p.first << "  " << std::string(p.second / (N/500), '*') << std::endl;
 
 	}
 
@@ -92,7 +92,7 @@ int main()
 	double sum = std::accumulate(raw.begin(), raw.end(), 0.0);
 	double mean = sum / raw.size();
 	myfile << "mean: " << mean << std::endl;
-	std::cout << "mean: " << mean << std::endl;
+	//std::cout << "mean: " << mean << std::endl;
 
 	std::vector<double> diff(raw.size());
 	std::transform(raw.begin(), raw.end(), diff.begin(),
@@ -100,7 +100,7 @@ int main()
 	double sq_sum = std::inner_product(diff.begin(), diff.end(), diff.begin(), 0.0);
 	double stdev = std::sqrt(sq_sum / raw.size());
 	myfile << "stdev: " << stdev << std::endl;
-	std::cout << "stdev: " << stdev << std::endl;
+	//std::cout << "stdev: " << stdev << std::endl;
 	
 	myfile.close();
 

@@ -1,0 +1,4 @@
+﻿  mm1_queue.cpp
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\queues\mm1_queue.h(154): warning C4129: '%': unrecognized character escape sequence
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\queues\mm1_queue.cpp(127): warning C4018: '<': signed/unsigned mismatch
+  MM1.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\queues\builds\Debug\MM1.exe
