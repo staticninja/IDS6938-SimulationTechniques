@@ -101,7 +101,8 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 <br>
 
 ### (d)
-**Random Number Engines Unit Square**
+
+**Random Number Engines  Square**
 
 |&nbsp; | Default Random Engine | Kunth-B | Ranlux 48 | Mersene Twister 19937 (64-bit) | Sobel |
 |----------|----------|----------|----------|----------|----------|
@@ -111,6 +112,7 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 | n = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/ffb6544f/Homework2/images/Default_PoleScrub.svg" width="300px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/bfca0581/Homework2/images/Sobol_poleScrub.svg" width="300px"> |
 <br>
 ### (e)
+
 **Distributions Unit Square**
 
 |&nbsp; | Uniform | Normal | Poisson | Exponent | Weibull|
