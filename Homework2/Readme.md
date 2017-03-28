@@ -199,6 +199,7 @@ I created a for loop to dynamically adjust the last 6 rows of the transition mat
 ### (b)
 
 <pre>In a simulation of 500 games the modal number of moves is 28
+</pre>
 
 ### (c)
 
