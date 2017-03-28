@@ -102,6 +102,7 @@ Mersene Twister 19937 (64 bit) was used as the fixed RNG for assessing distribut
 <pre>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</pre>
 <br>
 **Chi-Squared**
+<br>
 
 |	N = 1,000	|	Uniform1	|	Normal1	|	Poisson1	|	Exp1	|	Weibull1	|
 |	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|	-------------	|
