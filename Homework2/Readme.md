@@ -8,13 +8,43 @@
 <pre>The output of 5 random number generator (RNG) engines:
 https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output%20-%202.xlsx</pre>
 
-<pre>Charts & Useful Statistics to analyse how uniform the random numbers are.</pre>
+**Charts & Useful Statistics to analyse how uniform the random numbers are.**
+| &nbsp; | Mersene Twister 19937 (64 bit) - 1 | Mersene Twister 19937 (64 bit) - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250MT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250MT2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kMT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kMT2-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25MT1-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25MT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25MT2-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kDefault1-Hist.svg" width="300px"> |
+
+| &nbsp; | Default - 1 | Default - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250Default1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250Default2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kDefault1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kDefault2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25Default1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25Default2-Hist.svg" width="300px"> |
+
+| &nbsp; | Knuth B - 1 | Knuth B - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250Knuth1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250Knuth2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kKnuth1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kKnuth2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25Knuth1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25Knuth2-Hist.svg" width="300px"> |
+
+| &nbsp; | Ranlux 48 - 1 | Ranlux 48 - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250Ranlux1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250Ranlux2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kRanlux1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kRanlux2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25Ranlux1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25Ranlux2-Hist.svg" width="300px"> |
+
+| &nbsp; | Sobol - 1 | Sobol - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250Sobol1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250Sobol2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kSobol1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kSobol2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25Sobol1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25Sobol2-Hist.svg" width="300px"> |
+
 <br>
 
 
-<pre>Statistics to analyze RNG outputs</pre>
+**Statistics to analyze RNG outputs**
 
-**Chi-Square**
+<pre>Chi-Square</pre>
 
 |	N = 1,000	|	Mersene Twister 19937 (64 bit)	|	Default Random	|	Knuth-B	|	Ranlux 48	|	Sobol	|
 |	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|
@@ -30,7 +60,7 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 
 <br>
 
-**Spearman's Rank Correlation**
+<pre>Spearman's Rank Correlation</pre>
 
 |	N = 1,000	|		|	Mersene Twister 19937 (64 bit)	|	Default Random	|	Knuth-B	|	Ranlux 48	|	Sobol	|
 |	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|
@@ -51,11 +81,11 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 |		|	N	|	1000	|	1000	|	1000	|	1000	|	1000	|
 
 *. Correlation is significant at the 0.05 level (1-tailed).													
-
+<br>
 
 ### (b)
 
-When varying the number of values output from a RNG from 250, 1,000, and 2,500 the randomness seems to increase but patterns start to emerge.
+<pre>When varying the number of values output from a RNG from 250, 1,000, and 2,500 the randomness seems to increase but patterns start to emerge.</pre>
 
 ### (c)
 <pre>The output of the 5 different distributions in RNG can be found here:
@@ -64,11 +94,12 @@ Mersene Twister 19937 (64 bit) was used as the fixed RNG for assessing distribut
 </pre>
 
 
-<pre>Charts to analyse the different distributions.</pre>
+**Charts to analyse the different distributions.**
 
 
-<pre>Statistics to analyze distribution outputs</pre>
-
+**Statistics to analyze distribution outputs**
+<pre>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</pre>
+<br>
 **Chi-Squared**
 
 |	N = 1,000	|	Uniform1	|	Normal1	|	Poisson1	|	Exp1	|	Weibull1	|
@@ -82,8 +113,6 @@ b. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 c. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected cell frequency is 9.8.										
 d. 100 cells (100.0%) have expected frequencies less than 5. The minimum expected cell frequency is 3.6.										
 e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expected cell frequency is 3.7.										
-
-<br>
 
 **Spearman's Rank Correlation**
 
@@ -104,7 +133,6 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 |	**Weibull**	|	Correlation Coefficient	|	-.043	|	.028	|	.051	|	-.011	|	1.000	|
 |		|	Sig. (1-tailed)	|	.086	|	.192	|	.053	|	.367	|		|
 |		|	N	|	1000	|	1000	|	1000	|	1000	|	1000	|
-<br>
 
 ### (d)
 
@@ -116,7 +144,6 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 | n = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Default_1k.svg" width="300px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_1k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_1k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_1k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/bfca0581/Homework2/images/Sobol_1kScrub.svg" width="300px"> |
 | n = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Default_2.5k.svg" width="300px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_2.5k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_2.5k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_2.5k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/bfca0581/Homework2/images/Sobol_2.5kScrub.svg" width="300px"> |
 | n = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/ffb6544f/Homework2/images/Default_PoleScrub.svg" width="300px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/bfca0581/Homework2/images/Sobol_poleScrub.svg" width="300px"> |
-<br>
 
 ### (e)
 
@@ -128,8 +155,6 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 | n = 1,000 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Uniform_1000.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Normal_1000.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Poisson_1000.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Exp_1000.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Weibull_1000.svg" width="300px"> |
 | n = 2,500 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Uniform_2500.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Normal_2500.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Poisson_2500.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Exp_2500.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Weibull_2500.svg" width="300px"> |
 | n = 1,000  | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Uniform_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Normal_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Poisson_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Exp_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Weibull_Pole.svg" width="300px"> |
-
-<br>
 
 ### (f)
 
@@ -155,8 +180,8 @@ Code to generate all but the last six rows of the Null State Transition Matrix:
     	}
   </code>
 </pre>
-I created a for loop to dynamically adjust the last 6 rows of the transition matrix so if the size variable was changed it would adjust accordingly:
-<pre>
+<pre>I created a for loop to dynamically adjust the last 6 rows of the transition matrix so if the size variable was changed it would adjust accordingly:
+
 <code>
     for (int j = 0; j &lt; TransitionMatrix.rows(); j++)
     	{
@@ -200,7 +225,8 @@ I created a for loop to dynamically adjust the last 6 rows of the transition mat
 	
 ### (b)
 
-<pre>In a simulation of 500 games the modal number of moves is 28
+<pre>Transition Matrix: In a simulation of 500 games the modal number of moves is 28.
+Snakes & Ladders: In a simulation of 500 gmaes the modal numer of muves is 18.
 </pre>
 
 ### (c)
@@ -211,7 +237,7 @@ I created a for loop to dynamically adjust the last 6 rows of the transition mat
 
 ### (a)
 
-Setup MM1 queue scenario to match 
+Setup MM1 queue scenario to match this example:
 <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/queue.png">
 <pre>
 	   MM1_Queue    checkin;
@@ -278,7 +304,6 @@ Add external arrival where indicatred
 </pre>
 
 ### (c)
-
 Calculate Expected Results
 <pre>
       expected_server_utilization_ = lambda_/mu_;
@@ -290,19 +315,16 @@ Calculate Expected Results
       </pre>
 	  
 ### (d)
-
 ### (e)
-
 ### Part 4 - Extra Features
-
  * (10 Points) Add 2D visualization to Anylogic for Part 3.
  * (10 Points) Add 3D visualization to Anylogic for Part3.
  <img src="https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/AnyLogic%20Graphics.PNG">
  
 ### Part 5 - Final Report
-
 <pre>
 You're reading it.
 </pre>
 
 ### References
+<pre> None this time </pre>

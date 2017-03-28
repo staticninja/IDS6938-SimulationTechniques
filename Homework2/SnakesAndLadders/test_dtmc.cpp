@@ -32,7 +32,7 @@ int main() {
 	for (unsigned int i = 0; i < N; ++i) 
 	{
 		//TODO (add DTMC, and histogram lines.)
-		discreteMC = DTMC(TransitionMatrix, ROLLS, start); //Change TransitionMatrix to BoardMatrix when running with Snakes & Ladders
+		discreteMC = DTMC(BoardMatrix, ROLLS, start); //Change TransitionMatrix to BoardMatrix when running with Snakes & Ladders
 		++hist[std::round(discreteMC.back())];
 
 		// Code if you wanted to print out results at each step
@@ -48,11 +48,12 @@ int main() {
 	//(the states are indexed from 0 to n-1 where n is the number of arrays in transMatrix).
 	//hist is the histogram 
 
-
-	//(double)p.second / N    - (decimal) percentage.
-	/*for (auto p : hist) {
+/*
+	(double)p.second / N    - (decimal) percentage.
+	for (auto p : hist) {
 		std::cout << p.first << "\t" << (double)p.second / N << std::endl;
-	}*/
+	}
+*/
 
 	myfile.close();
 

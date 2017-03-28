@@ -3,7 +3,7 @@ Eigen::MatrixXf TransitionMatrix(size, size);
 Eigen::MatrixXf BoardMatrix(size, size);
 Eigen::VectorXf v(size);
 
-unsigned int ROLLS = 50; //TODO
+unsigned int ROLLS = 80; //TODO
 double prob = 1.0/6.0;  //TODO
 
 void SetTransitionMatrix()
