@@ -8,7 +8,7 @@
 <pre>The output of 5 random number generator (RNG) engines:
 https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output%20-%202.xlsx</pre>
 
-<pre>Charts to analyse how uniform the random numbers are.</pre>
+<pre>Charts & Useful Statistics to analyse how uniform the random numbers are.</pre>
 <br>
 
 
@@ -31,6 +31,7 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 <br>
 
 **Spearman's Rank Correlation**
+<br>
 
 |	N = 1,000	|		|	Mersene Twister 19937 (64 bit)	|	Default Random	|	Knuth-B	|	Ranlux 48	|	Sobol	|
 |	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|
@@ -298,5 +299,9 @@ Calculate Expected Results
  <img src="https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/AnyLogic%20Graphics.PNG">
  
 ### Part 5 - Final Report
+
+<pre>
+You're reading it.
+</pre>
 
 ### References
