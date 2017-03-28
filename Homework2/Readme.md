@@ -115,6 +115,7 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 | n = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Default_2.5k.svg" width="300px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_2.5k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_2.5k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_2.5k.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/bfca0581/Homework2/images/Sobol_2.5kScrub.svg" width="300px"> |
 | n = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/ffb6544f/Homework2/images/Default_PoleScrub.svg" width="300px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/bfca0581/Homework2/images/Sobol_poleScrub.svg" width="300px"> |
 <br>
+
 ### (e)
 
 **Distributions Unit Squares & Circles**
@@ -127,7 +128,9 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 | n = 1,000  | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Uniform_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Normal_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Poisson_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Exp_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Weibull_Pole.svg" width="300px"> |
 
 <br>
+
 ### (f)
+
 <pre>
 Unit circle representations can be found in their respective sections (d) & (e).
 </pre>
@@ -135,6 +138,7 @@ Unit circle representations can be found in their respective sections (d) & (e).
 ## Part 2 - Snakes and Ladders - Discrete Event Markov Chains and Monte Carlo Simulations
 
 ### (a)
+
 **Null State Transition Matrix**
 Code to generate all but the last six rows of the Null State Transition Matrix:
 <pre>
@@ -193,7 +197,9 @@ I created a for loop to dynamically adjust the last 6 rows of the transition mat
 	</pre>
 	
 ### (b)
+
 <pre>In a simulation of 500 games the modal number of moves is 28
+
 ### (c)
 
 ### (d)
@@ -201,6 +207,7 @@ I created a for loop to dynamically adjust the last 6 rows of the transition mat
 ## Part 3 - Discrete Event Simulation - Queue Simulation
 
 ### (a)
+
 Setup MM1 queue scenario to match 
 <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/queue.png">
 <pre>
@@ -242,7 +249,9 @@ Setup MM1 queue scenario to match
 	   Boarding.initialize();
 	   Boarding.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
 	   </pre>
+	   
 ### (b)
+
 Add a check to the process
 <pre>
  	   !checkin.is_within_error_range(0.002) ||
@@ -264,7 +273,9 @@ Add external arrival where indicatred
 				Security3.add_external_arrival();
 				Boarding.add_external_arrival();
 </pre>
+
 ### (c)
+
 Calculate Expected Results
 <pre>
       expected_server_utilization_ = lambda_/mu_;
@@ -274,12 +285,16 @@ Calculate Expected Results
       expected_waiting_time_ = expected_server_utilization_/(mu_-lambda_);
       expected_response_time_ = 1/(mu_-lambda_);
       </pre>
+	  
 ### (d)
+
 ### (e)
 
 ### Part 4 - Extra Features
+
  * (10 Points) Add 2D visualization to Anylogic for Part 3.
  * (10 Points) Add 3D visualization to Anylogic for Part3.
+ 
 ### Part 5 - Final Report
 
 ### References
