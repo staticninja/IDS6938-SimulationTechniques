@@ -1,0 +1,24 @@
+﻿  test_markov.cpp
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(29): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(35): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(37): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(38): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(42): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(43): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(48): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(57): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Markov.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\SnakesAndLadders\build\Debug\Markov.exe

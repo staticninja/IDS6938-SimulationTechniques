@@ -1,0 +1,2 @@
+﻿markov.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:ICF' specification
+  DTMC.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\SnakesAndLadders\build\Release\DTMC.exe
