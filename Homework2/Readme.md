@@ -295,6 +295,7 @@ Calculate Expected Results
 
  * (10 Points) Add 2D visualization to Anylogic for Part 3.
  * (10 Points) Add 3D visualization to Anylogic for Part3.
+ <img src="https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/AnyLogic%20Graphics.PNG">
  
 ### Part 5 - Final Report
 
