@@ -14,6 +14,8 @@ int main(){
 
 	SetTransitionMatrix();
 
+	SetBoardMatrix();
+
 	//Output Vector
 	v.setZero();
 	v(0) = 1.0;
@@ -25,9 +27,10 @@ int main(){
 	
    // TODO add Markov vector - Matrix multiplication
 	v = v.transpose() * TransitionMatrix; //formula from piazza and Dr. Kider. 
-	std::cout << v << std::endl;
 
-	//myfile << v << std::endl;  //this is just a sample, becareful how you print to file so you can mine useful stats
+	
+
+	myfile << v << std::endl;  //this is just a sample, becareful how you print to file so you can mine useful stats
 	
 	myfile.close();
 

@@ -39,55 +39,55 @@ int main(int argc, char* argv[])
 	   checkin.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
 	   checkin.set_mu(53);
 	   checkin.initialize();
-	   checkin.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
+	   checkin.set_seed(rd(), rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
 
-	   MM1_Queue    Security1;
-	   Security1.set_file_names("Security1_log.txt", "Security1_wait.txt", "Security1_service.txt");
-	   Security1.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
-	   Security1.set_mu(20);
-	   Security1.autogenerate_new_arrivals(false);
-	   Security1.initialize();
-	   Security1.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
+	   MM1_Queue    security1;
+	   security1.set_file_names("Security1_log.txt", "Security1_wait.txt", "Security1_service.txt");
+	   security1.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
+	   security1.set_mu(20);
+	   security1.autogenerate_new_arrivals(false);
+	   security1.initialize();
+	   security1.set_seed(rd(), rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
 
-	   MM1_Queue    Security2;
-	   Security2.set_file_names("Security2_log.txt", "Security2_wait.txt", "Security2_service.txt");
-	   Security2.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
-	   Security2.set_mu(20);
-	   Security2.autogenerate_new_arrivals(false);
-	   Security2.initialize();
-	   Security2.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
+	   MM1_Queue    security2;
+	   security2.set_file_names("Security2_log.txt", "Security2_wait.txt", "Security2_service.txt");
+	   security2.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
+	   security2.set_mu(20);
+	   security2.autogenerate_new_arrivals(false);
+	   security2.initialize();
+	   security2.set_seed(rd(), rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
 
-	   MM1_Queue    Security3;
-	   Security3.set_file_names("Security3_log.txt", "Security3_wait.txt", "Security3_service.txt");
-	   Security3.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
-	   Security3.set_mu(20);
-	   Security3.autogenerate_new_arrivals(false);
-	   Security3.initialize();
-	   Security3.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
+	   MM1_Queue    security3;
+	   security3.set_file_names("Security3_log.txt", "Security3_wait.txt", "Security3_service.txt");
+	   security3.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
+	   security3.set_mu(20);
+	   security3.autogenerate_new_arrivals(false);
+	   security3.initialize();
+	   security3.set_seed(rd(), rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
 
-	   MM1_Queue    Boarding;
-	   Boarding.set_file_names("Boarding_log.txt", "Boarding_wait.txt", "Boarding_service.txt");
-	   Boarding.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
-	   Boarding.set_mu(80);
-	   Boarding.initialize();
-	   Boarding.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
+	   MM1_Queue    boarding;
+	   boarding.set_file_names("Boarding_log.txt", "Boarding_wait.txt", "Boarding_service.txt");
+	   boarding.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
+	   boarding.set_mu(80);
+	   boarding.initialize();
+	   boarding.set_seed(rd(), rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
 	   //************************************************************
 
 
    for (; 
 		//TODO: add is_within_error_range check
 	   !checkin.is_within_error_range(0.002) ||
-	   !Security1.is_within_error_range(0.002) ||
-	   !Security2.is_within_error_range(0.002) ||
-	   !Security3.is_within_error_range(0.002)
+	   !security1.is_within_error_range(0.002) ||
+	   !security2.is_within_error_range(0.002) ||
+	   !security3.is_within_error_range(0.002) ||
+	   !boarding.is_within_error_range(0.002)
        ;)
    {
 	   Customer cust  = checkin.process_next_event();    // =  TODO: process next event;
-	   Customer cust2  = Security1.process_next_event();   // =  TODO: process next event;
-	   Customer cust3  = Security2.process_next_event();   // =  TODO: process next event;
-	   Customer cust4  = Security3.process_next_event();   // =  TODO: process next event;
-	   Customer cust5 = Boarding.process_next_event();   // =  TODO: process next event;
-	   //TODO: one more process_next_event for the last object.
+	   Customer cust2  = security1.process_next_event();   // =  TODO: process next event;
+	   Customer cust3  = security2.process_next_event();   // =  TODO: process next event;
+	   Customer cust4  = security3.process_next_event();   // =  TODO: process next event;
+	   Customer cust5 = boarding.process_next_event();   // =  TODO: process next event;
 
        if (cust.get_type() == Customer::COMPLETED())
        {
@@ -95,17 +95,17 @@ int main(int argc, char* argv[])
           {
             case 0:
 				//TODO add_external_arrival() for your security gates;
-				Security1.add_external_arrival();
+				security1.add_external_arrival();
 
                  break;
             case 1:
 				//TODO add_external_arrival() for your security gates;
-				Security2.add_external_arrival();
+				security2.add_external_arrival();
 
                  break;
             case 2:
                 //TODO add_external_arrival() for your security gates;
-				Security3.add_external_arrival();
+				security3.add_external_arrival();
 
                  break;
           }
@@ -115,7 +115,7 @@ int main(int argc, char* argv[])
        if (cust2.get_type() == Customer::COMPLETED() || cust3.get_type() == Customer::COMPLETED() || cust4.get_type() == Customer::COMPLETED())
        {
 		   //TODO add_external_arrival(); on your final boarding MM1_Queue object
-		   Boarding.add_external_arrival();
+		   boarding.add_external_arrival();
 
        }
    }
@@ -123,16 +123,12 @@ int main(int argc, char* argv[])
 
 
    //TODO Output statistics airport senario.
-   checkin.output(); cout << "*********" << endl;
-   Security1.output(); cout << "*********" << endl;
-   Security2.output(); cout << "*********" << endl;
-   Security3.output(); cout << "*********" << endl;
-   Boarding.output(); cout << "*********" << endl;
-
-
+   checkin.output(); cout << endl << endl;
+   security1.output(); cout << endl << endl;
+   security2.output(); cout << endl << endl;
+   security3.output(); cout << endl << endl;
+   boarding.output(); cout << endl << endl;
    //**************************************************************************
-
-
 
    }
 

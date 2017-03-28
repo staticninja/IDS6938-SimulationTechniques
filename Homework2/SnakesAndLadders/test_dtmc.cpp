@@ -17,6 +17,7 @@
 int main() {
 
 	SetTransitionMatrix();
+	SetBoardMatrix();
 
 	// Print Results to File
 	std::ofstream myfile;
@@ -25,29 +26,33 @@ int main() {
 	int start = 0;
 
 	//simulate discrete time Markov Chain
-	unsigned int N = 50;
+	unsigned int N = 500;
 	std::map<int, int> hist;
 	std::vector<int> discreteMC;
-	for (unsigned int i = 0; i < N; ++i) {
-		
+	for (unsigned int i = 0; i < N; ++i) 
+	{
 		//TODO (add DTMC, and histogram lines.)
-		DTMC(v, ROLLS, start); //I'm not sure where I was going with this.
+		discreteMC = DTMC(TransitionMatrix, ROLLS, start); //Change TransitionMatrix to BoardMatrix when running with Snakes & Ladders
+		++hist[std::round(discreteMC.back())];
 
 		// Code if you wanted to print out results at each step
 		for (auto elem : discreteMC)
+		{
 			std::cout << elem << std::endl;
-
+			myfile << std::fixed << elem << std::endl;
+		}
 	}
+
 	//Returns an array discreteMC with the states at each step of the discrete-time Markov Chain
 	//The number of transitions is given by steps. The initial state is given by start 
 	//(the states are indexed from 0 to n-1 where n is the number of arrays in transMatrix).
 	//hist is the histogram 
 
 
-	// (double)p.second / N    - (decimal) percentage.
-	for (auto p : hist) {
+	//(double)p.second / N    - (decimal) percentage.
+	/*for (auto p : hist) {
 		std::cout << p.first << "\t" << (double)p.second / N << std::endl;
-	}
+	}*/
 
 	myfile.close();
 

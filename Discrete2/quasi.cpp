@@ -14,7 +14,7 @@
 
 # define DIM_MAX 2
 
-int dim_num = 1;
+int dim_num = 2;
 float *r;
 int seed;
 int seed_in;
@@ -46,7 +46,7 @@ int main()
 	uint64_t timeSeed = std::chrono::high_resolution_clock::now().time_since_epoch().count();
 	std::seed_seq ss{ uint32_t(timeSeed & 0xffffffff), uint32_t(timeSeed >> 32) };
 	// 2 different ways to get a random starting seed
-	seed = 2251740;
+	seed = rd()/1000.0;
 	//seed = ss;
 
 
@@ -58,7 +58,7 @@ int main()
 
 
 	for (unsigned int i = 0; i < N; ++i) {
-		randomValue = 0 + getQuasiRandomNumber(&seed) * 100;
+		randomValue = 0 + getQuasiRandomNumber(&seed);
 
 		++hist[std::round(randomValue)]; // count the values
 		raw.push_back(randomValue);  //push the raw values

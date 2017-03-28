@@ -5,8 +5,8 @@
 ## **Part 1 - Emperical Tests of Randomness**
 
 ### (a)
-<pre>The out put of 5 random number generator (RNG) engines:
-https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output.xlsx</pre>
+<pre>The output of 5 random number generator (RNG) engines:
+https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output%20-%202.xlsx</pre>
 
 <pre>Charts to analyse how uniform the random numbers are.</pre>
 <br>
@@ -55,9 +55,14 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 
 ### (b)
 
-When changing the number of values output from a RNG from 10, 100, and 1000 the randomness seems to increase from 10 to 100 and then patterns start to emerge once you reach 1000.
+When varying the number of values output from a RNG from 250, 1,000, and 2,500 the randomness seems to increase but patterns start to emerge.
 
 ### (c)
+<pre>The output of the 5 different distributions in RNG can be found here:
+https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/DIST%20Output.xlsx
+Mersene Twister 19937 (64 bit) was used as the fixed RNG for assessing distributions.
+</pre>
+
 
 <pre>Charts to analyse the different distributions.</pre>
 
@@ -100,7 +105,8 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 <br>
 
 ### (d)
-**Random Number Engines Unit Square**
+
+**Random Number Engines Unit Squares & Circles**
 |&nbsp; | Default Random Engine | Kunth-B | Ranlux 48 | Mersene Twister 19937 (64-bit) | Sobel |
 |----------|----------|----------|----------|----------|----------|
 |n = 250 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Default_250.svg" width="300px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_250.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/240ae4ce/Homework2/images/Ranlux_250.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_250.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/bfca0581/Homework2/images/Sobol_250Scrub.svg" width="300px"> | 
@@ -109,7 +115,8 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 | n = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/ffb6544f/Homework2/images/Default_PoleScrub.svg" width="300px">|<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Knuth_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/Ranlux_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/210d580a/Homework2/images/MT_Pole.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/bfca0581/Homework2/images/Sobol_poleScrub.svg" width="300px"> |
 <br>
 ### (e)
-**Distributions Unit Square**
+
+**Distributions Unit Squares & Circles**
 |&nbsp; | Uniform | Normal | Poisson | Exponent | Weibull|
 |----------|----------|----------|----------|----------|----------|
 |n = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Uniform_250.svg" width="300px">| <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Normal_250.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Poisson_250.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Exp_250.svg" width="300px"> | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/Weibull_250.svg" width="300px"> | 
@@ -119,13 +126,74 @@ e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 
 <br>
 ### (f)
-Unit circle representations can be found in their respective sections in the tables above.
+<pre>
+Unit circle representations can be found in their respective sections (d) & (e).
+</pre>
 
 ## Part 2 - Snakes and Ladders - Discrete Event Markov Chains and Monte Carlo Simulations
 
 ### (a)
+**Null State Transition Matrix**
+Code to generate all but the last six rows of the Null State Transition Matrix:
+<pre>
+<code>for (int i = 0; i &lt; TransitionMatrix.rows() - 6; i++)
+    	{
+    		TransitionMatrix(i, i + 1) = prob;
+    		TransitionMatrix(i, i + 2) = prob;
+    		TransitionMatrix(i, i + 3) = prob;
+    		TransitionMatrix(i, i + 4) = prob;
+    		TransitionMatrix(i, i + 5) = prob;
+    		TransitionMatrix(i, i + 6) = prob;
+    	}
+  </code>
+</pre>
+I created a for loop to dynamically adjust the last 6 rows of the transition matrix so if the size variable was changed it would adjust accordingly:
+<pre>
+<code>
+    for (int j = 0; j &lt; TransitionMatrix.rows(); j++)
+    	{
+    		if (j == TransitionMatrix.rows() - 6)
+    		{
+    			TransitionMatrix(j, TransitionMatrix.rows() - 1) = prob * 2;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 2) = prob;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 3) = prob;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 4) = prob;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 5) = prob;
+    		}
+    		if (j == TransitionMatrix.rows() - 5)
+    		{
+    			TransitionMatrix(j, TransitionMatrix.rows() - 1) = prob * 3;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 2) = prob;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 3) = prob;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 4) = prob;
+    		}
+    		if (j == TransitionMatrix.rows() - 4)
+    		{
+    			TransitionMatrix(j, TransitionMatrix.rows() - 1) = prob * 4;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 2) = prob;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 3) = prob;
+    		}
+    		if (j == TransitionMatrix.rows() - 3)
+    		{
+    			TransitionMatrix(j, TransitionMatrix.rows() - 1) = prob * 5;
+    			TransitionMatrix(j, TransitionMatrix.rows() - 2) = prob;
+    		}
+    		if (j == TransitionMatrix.rows() - 2)
+    		{
+    			TransitionMatrix(j, TransitionMatrix.rows() - 1) = prob * 6;
+    		}
+    		if (j == TransitionMatrix.rows() - 1)
+    		{
+    			TransitionMatrix(j, TransitionMatrix.rows() - 1) = prob * 6;
+    		}
+    	}
+	</code>
+	</pre>
+	
 ### (b)
+
 ### (c)
+
 ### (d)
 
 ## Part 3 - Discrete Event Simulation - Queue Simulation
@@ -179,6 +247,21 @@ Add a check to the process
 	   !Security1.is_within_error_range(0.002) ||
 	   !Security2.is_within_error_range(0.002) ||
 	   !Security3.is_within_error_range(0.002) </pre>
+Process next event
+<pre>
+	   Customer cust  = checkin.process_next_event();    // =  TODO: process next event;
+	   Customer cust2  = Security1.process_next_event();   // =  TODO: process next event;
+	   Customer cust3  = Security2.process_next_event();   // =  TODO: process next event;
+	   Customer cust4  = Security3.process_next_event();   // =  TODO: process next event;
+	   Customer cust5 = Boarding.process_next_event();   // =  TODO: process next event;
+</pre>
+Add external arrival where indicatred
+<pre>
+				Security1.add_external_arrival();
+				Security2.add_external_arrival();
+				Security3.add_external_arrival();
+				Boarding.add_external_arrival();
+</pre>
 ### (c)
 Calculate Expected Results
 <pre>

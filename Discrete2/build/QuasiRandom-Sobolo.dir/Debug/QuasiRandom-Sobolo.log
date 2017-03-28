@@ -1,3 +1,4 @@
 ﻿  quasi.cpp
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Discrete2\quasi.cpp(49): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Discrete2\quasi.cpp(63): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   QuasiRandom-Sobolo.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Discrete2\build\Debug\QuasiRandom-Sobolo.exe
