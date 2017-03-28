@@ -9,6 +9,7 @@
 https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output%20-%202.xlsx</pre>
 
 **Charts & Useful Statistics to analyse how uniform the random numbers are.**
+
 | &nbsp; | Mersene Twister 19937 (64 bit) - 1 | Mersene Twister 19937 (64 bit) - 2 | 
 |----------|----------|----------|
 |N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250MT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250MT2-Hist.svg" width="300px"> |
