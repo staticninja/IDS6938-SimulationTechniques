@@ -168,9 +168,9 @@ Unit circle representations can be found in their respective sections (d) & (e).
 
 ### (a)
 
-**Null State Transition Matrix**
-Code to generate all but the last six rows of the Null State Transition Matrix:
+**Null State Transition Matrix**<br>
 <pre>
+Code to generate all but the last six rows of the Null State Transition Matrix:
 <code>for (int i = 0; i &lt; TransitionMatrix.rows() - 6; i++)
     	{
     		TransitionMatrix(i, i + 1) = prob;
