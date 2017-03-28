@@ -31,7 +31,6 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 <br>
 
 **Spearman's Rank Correlation**
-<br>
 
 |	N = 1,000	|		|	Mersene Twister 19937 (64 bit)	|	Default Random	|	Knuth-B	|	Ranlux 48	|	Sobol	|
 |	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|
@@ -69,6 +68,7 @@ Mersene Twister 19937 (64 bit) was used as the fixed RNG for assessing distribut
 
 
 <pre>Statistics to analyze distribution outputs</pre>
+
 **Chi-Squared**
 
 |	N = 1,000	|	Uniform1	|	Normal1	|	Poisson1	|	Exp1	|	Weibull1	|
@@ -84,6 +84,7 @@ d. 100 cells (100.0%) have expected frequencies less than 5. The minimum expecte
 e. 100 cells (100.0%) have expected frequencies less than 5. The minimum expected cell frequency is 3.7.										
 
 <br>
+
 **Spearman's Rank Correlation**
 
 |	N = 1,000	|		|	Uniform	|	Normal	|	Poisson	|	Exponental	|	Weibull	|
