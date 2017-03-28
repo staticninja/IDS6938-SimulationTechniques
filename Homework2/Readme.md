@@ -191,7 +191,7 @@ I created a for loop to dynamically adjust the last 6 rows of the transition mat
 	</pre>
 	
 ### (b)
-
+<pre>In a simulation of 500 games the modal number of moves is 28
 ### (c)
 
 ### (d)
@@ -276,7 +276,8 @@ Calculate Expected Results
 ### (e)
 
 ### Part 4 - Extra Features
-
+ * (10 Points) Add 2D visualization to Anylogic for Part 3.
+ * (10 Points) Add 3D visualization to Anylogic for Part3.
 ### Part 5 - Final Report
 
 ### References
