@@ -6,16 +6,17 @@ Using one of my extra days.
 ## **Part 1 - Emperical Tests of Randomness**
 
 ### (a)
-<pre>The output of 5 random number generator (RNG) engines:
-https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output%20-%202.xlsx</pre>
+<pre>The output of 5 random number generator (RNG) engines, using a uniform distribution for values between [0-100]:
+<a href="https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output%20-%202.xlsx"> Excel File</a></pre>
 
-**Charts & Useful Statistics to analyse how uniform the random numbers are.**
+####Charts & Useful Statistics to analyse how uniform the random numbers are.
+**Charts**
 
 | &nbsp; | Mersene Twister 19937 (64 bit) - 1 | Mersene Twister 19937 (64 bit) - 2 | 
 |----------|----------|----------|
 |N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250MT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/250MT2-Hist.svg" width="300px"> |
-|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kMT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kMT2-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25MT1-Hist.svg" width="300px"> |
-|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25MT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25MT2-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kDefault1-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kMT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/1kMT2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25MT1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/4ab775c7/Homework2/images/Histograms/25MT2-Hist.svg" width="300px"> 
 
 | &nbsp; | Default - 1 | Default - 2 | 
 |----------|----------|----------|
@@ -45,8 +46,8 @@ https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework
 
 
 **Statistics to analyze RNG outputs**
-
-<pre>Chi-Square</pre>
+<pre>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</pre>
+#### Chi-Square
 
 |	N = 1,000	|	Mersene Twister 19937 (64 bit)	|	Default Random	|	Knuth-B	|	Ranlux 48	|	Sobol	|
 |	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|
@@ -62,7 +63,7 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 
 <br>
 
-<pre>Spearman's Rank Correlation</pre>
+#### Spearman's Rank Correlation
 
 |	N = 1,000	|		|	Mersene Twister 19937 (64 bit)	|	Default Random	|	Knuth-B	|	Ranlux 48	|	Sobol	|
 |	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|	----------	|
@@ -87,22 +88,54 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 
 ### (b)
 
-<pre>When varying the number of values output from a RNG from 250, 1,000, and 2,500 the randomness seems to increase but patterns start to emerge.</pre>
+<pre>When varying the number of values output from a RNG from 250, 1,000, and 2,500 the randomness seems to increase however, patterns start to emerge. Reference the Excel from (a).</pre>
 
 ### (c)
 <pre>The output of the 5 different distributions in RNG can be found here:
-https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/DIST%20Output.xlsx
+
+<a href="https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/DIST%20Output.xlsx">Excel File </a>
+
 Mersene Twister 19937 (64 bit) was used as the fixed RNG for assessing distributions.
 </pre>
 
+####Charts & Useful Statistics to analyse distributions.
 
-**Charts to analyse the different distributions.**
+**Charts**
 
+| &nbsp; | Exponential - 1 | Exponential - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Exp1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Exp2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kExp1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kExp2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Exp1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Exp2-Hist.svg" width="300px"> |
 
-**Statistics to analyze distribution outputs**
-<pre>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</pre>
+| &nbsp; | Normal - 1 | Normal - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Normal1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Normal2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kNormal1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kNormal2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Normal1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Normal2-Hist.svg" width="300px"> |
+
+| &nbsp; | Poisson - 1 | Poisson - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Poisson1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Poisson2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kPoisson1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kPoisson2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Poisson1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Poisson2-Hist.svg" width="300px"> |
+
+| &nbsp; | Uniform - 1 | Uniform - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Uniform1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Uniform2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kUniform1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kUniform2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Uniform1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Uniform2-Hist.svg" width="300px"> |
+
+| &nbsp; | Weibull - 1 | Weibull - 2 | 
+|----------|----------|----------|
+|N = 250 | <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Weibull1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/250Weibull2-Hist.svg" width="300px"> |
+|N = 1,000 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kWeibull1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/1kWeibull2-Hist.svg" width="300px"> |
+|N = 2,500 |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Weibull1-Hist.svg" width="300px"> |<img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/20c19320/Homework2/images/Histograms/25Weibull2-Hist.svg" width="300px"> |
+
 <br>
 
+**Statistics**
+<pre>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</pre>
 **Chi-Squared**
 
 |	N = 1,000	|	Uniform1	|	Normal1	|	Poisson1	|	Exp1	|	Weibull1	|
@@ -228,12 +261,22 @@ Code to generate all but the last six rows of the Null State Transition Matrix:
 	</pre>
 	
 ### (b)
+Simulate and analyze the results of the null state game.
+
+####DTMC
+
+####Monte Carlo
 
 <pre>Transition Matrix: In a simulation of 500 games the modal number of moves is 28.
 Snakes & Ladders: In a simulation of 500 gmaes the modal numer of muves is 18.
 </pre>
 
 ### (c)
+Simulate and analyze the results of Snakes and Ladders game.
+
+####DTMC
+
+####Monte Carlo
 
 ### (d)
 
