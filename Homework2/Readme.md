@@ -295,7 +295,6 @@ Setup MM1 queue scenario to match this example:
 	   checkin.set_mu(53);
 	   checkin.initialize();
 	   checkin.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
-
 	   MM1_Queue    Security1;
 	   Security1.set_file_names("Security1_log.txt", "Security1_wait.txt", "Security1_service.txt");
 	   Security1.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
@@ -303,7 +302,6 @@ Setup MM1 queue scenario to match this example:
 	   Security1.autogenerate_new_arrivals(false);
 	   Security1.initialize();
 	   Security1.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
-
 	   MM1_Queue    Security2;
 	   Security2.set_file_names("Security2_log.txt", "Security2_wait.txt", "Security2_service.txt");
 	   Security2.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
@@ -311,7 +309,6 @@ Setup MM1 queue scenario to match this example:
 	   Security2.autogenerate_new_arrivals(false);
 	   Security2.initialize();
 	   Security2.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
-
 	   MM1_Queue    Security3;
 	   Security3.set_file_names("Security3_log.txt", "Security3_wait.txt", "Security3_service.txt");
 	   Security3.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
@@ -319,7 +316,6 @@ Setup MM1 queue scenario to match this example:
 	   Security3.autogenerate_new_arrivals(false);
 	   Security3.initialize();
 	   Security3.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
-
 	   MM1_Queue    Boarding;
 	   Boarding.set_file_names("Boarding_log.txt", "Boarding_wait.txt", "Boarding_service.txt");
 	   Boarding.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
