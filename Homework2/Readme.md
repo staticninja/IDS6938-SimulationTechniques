@@ -1,6 +1,7 @@
 # Homework 2 : Snakes and Ladders (Discrete Simulation Assignment)
 ## IDS6938-Simulation Techniques - [University of Central Florida](http://www.ist.ucf.edu/grad/)
 
+Using one of my extra days.
 
 ## **Part 1 - Emperical Tests of Randomness**
 
