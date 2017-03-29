@@ -10,6 +10,7 @@ Using one of my extra days.
 <a href="https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output%20-%202.xlsx"> Excel File</a></pre>
 
 #### Charts & Useful Statistics to analyse how uniform the random numbers are.
+
 **Charts**
 
 | &nbsp; | Mersene Twister 19937 (64 bit) - 1 | Mersene Twister 19937 (64 bit) - 2 | 
@@ -46,7 +47,7 @@ Using one of my extra days.
 
 
 **Statistics to analyze RNG outputs**
-<pre>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</pre>
+<code>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</code>
 #### Chi-Square
 
 |	N = 1,000	|	Mersene Twister 19937 (64 bit)	|	Default Random	|	Knuth-B	|	Ranlux 48	|	Sobol	|
