@@ -47,6 +47,7 @@ Using one of my extra days.
 
 
 **Statistics to analyze RNG outputs**
+
 <code>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</code>
 #### Chi-Square
 
