@@ -90,7 +90,7 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 
 ### (b)
 
-<pre>When varying the number of values output from a RNG from 250, 1,000, and 2,500 the randomness seems to increase however, patterns start to emerge. Reference the Excel from (a).</pre>
+<code>When varying the number of values output from a RNG from 250, 1,000, and 2,500 the randomness seems to increase however, patterns start to emerge. Reference the Excel from (a).</code>
 
 ### (c)
 <pre>The output of the 5 different distributions in RNG can be found here:
@@ -137,7 +137,7 @@ Mersene Twister 19937 (64 bit) was used as the fixed RNG for assessing distribut
 <br>
 
 **Statistics**
-<pre>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</pre>
+<Code>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</Code>
 **Chi-Squared**
 
 |	N = 1,000	|	Uniform1	|	Normal1	|	Poisson1	|	Exp1	|	Weibull1	|
@@ -288,7 +288,7 @@ Simulate and analyze the results of Snakes and Ladders game.
 
 Setup MM1 queue scenario to match this example:
 <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/b6c658a8/Homework2/images/queue.png">
-<pre>
+<code>
 	   MM1_Queue    checkin;
 	   checkin.set_file_names("ID_Check_log.txt", "ID_Check_wait.txt", "ID_Check_service.txt");
 	   checkin.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
@@ -326,7 +326,7 @@ Setup MM1 queue scenario to match this example:
 	   Boarding.set_mu(80);
 	   Boarding.initialize();
 	   Boarding.set_seed(1, rd());   // I set the first one to 1 for testing, the others you should use two random seeds (rd(), rd())
-	   </pre>
+	   </code>
 	   
 ### (b)
 
