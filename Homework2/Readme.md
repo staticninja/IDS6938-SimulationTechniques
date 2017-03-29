@@ -9,7 +9,7 @@ Using one of my extra days.
 <pre>The output of 5 random number generator (RNG) engines, using a uniform distribution for values between [0-100]:
 <a href="https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/RNG%20Output%20-%202.xlsx"> Excel File</a></pre>
 
-####Charts & Useful Statistics to analyse how uniform the random numbers are.
+#### Charts & Useful Statistics to analyse how uniform the random numbers are.
 **Charts**
 
 | &nbsp; | Mersene Twister 19937 (64 bit) - 1 | Mersene Twister 19937 (64 bit) - 2 | 
@@ -98,7 +98,7 @@ e. 0 cells (0.0%) have expected frequencies less than 5. The minimum expected ce
 Mersene Twister 19937 (64 bit) was used as the fixed RNG for assessing distributions.
 </pre>
 
-####Charts & Useful Statistics to analyse distributions.
+#### Charts & Useful Statistics to analyse distributions.
 
 **Charts**
 
@@ -263,9 +263,9 @@ Code to generate all but the last six rows of the Null State Transition Matrix:
 ### (b)
 Simulate and analyze the results of the null state game.
 
-####DTMC
+#### DTMC
 
-####Monte Carlo
+#### Monte Carlo
 
 <pre>Transition Matrix: In a simulation of 500 games the modal number of moves is 28.
 Snakes & Ladders: In a simulation of 500 gmaes the modal numer of muves is 18.
@@ -274,9 +274,9 @@ Snakes & Ladders: In a simulation of 500 gmaes the modal numer of muves is 18.
 ### (c)
 Simulate and analyze the results of Snakes and Ladders game.
 
-####DTMC
+#### DTMC
 
-####Monte Carlo
+#### Monte Carlo
 
 ### (d)
 
