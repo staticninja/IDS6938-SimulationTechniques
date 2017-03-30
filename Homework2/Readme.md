@@ -137,6 +137,7 @@ Mersene Twister 19937 (64 bit) was used as the fixed RNG for assessing distribut
 <br>
 
 **Statistics**
+
 <Code>At this time I have not recieved any training on how to interpret or even correctly run these statistical analysis and feel that my attempt to "interpret" them would be unethical.</Code>
 **Chi-Squared**
 
@@ -289,7 +290,6 @@ Simulate and analyze the results of the null state game.
 #### Monte Carlo
 
 <pre>Transition Matrix: In a simulation of 500 games the modal number of moves is 28.
-Snakes & Ladders: In a simulation of 500 gmaes the modal numer of muves is 18.
 </pre>
 
 ### (c)
@@ -298,6 +298,9 @@ Simulate and analyze the results of Snakes and Ladders game.
 #### Markov Chain
 
 #### Monte Carlo
+<pre>
+Snakes & Ladders: In a simulation of 500 games the modal number of moves is 18.
+</pre>
 
 ### (d)
 
@@ -384,13 +387,16 @@ Calculate Expected Results
       </pre>
 	  
 ### (d)
+I tried to do this but it wouldn't cooperate. After spending too much time working on it I decided it was time to move on to other parts of the assignment.
 
 ### (e)
+Anylogic simulation can be found here: https://github.com/staticninja/IDS6938-SimulationTechniques/tree/master/Homework2/AnyLogic%20Airport%20Simulation
 
 ## Part 4 - Extra Features
  * (10 Points) Add 2D visualization to Anylogic for Part 3.
  * (10 Points) Add 3D visualization to Anylogic for Part3.
- * <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/c74457de/Homework2/images/AnyLogic%20Graphics.PNG">
+ Both Extra Features can be found in the Anylogic Save files but a simplified screen capture is presented here
+ <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/c74457de/Homework2/images/AnyLogic%20Graphics.PNG">
  
  
 ### Part 5 - Final Report
