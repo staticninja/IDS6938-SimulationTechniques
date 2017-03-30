@@ -1,0 +1,10 @@
+﻿  Building Custom Rule C:/Users/Mac/Desktop/IDS6938-SimulationTechniques/Agent1/CMakeLists.txt
+  CMake does not need to re-run because C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Agent1\build\CMakeFiles\generate.stamp is up-to-date.
+  main.cpp
+  conway.cpp
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Agent1\src\conway.cpp(263): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Agent1\src\conway.cpp(268): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\agent1\src\drawing.h(24): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion (compiling source file C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Agent1\src\main.cpp)
+c:\users\mac\desktop\ids6938-simulationtechniques\agent1\src\drawing.h(120): warning C4101: 'k': unreferenced local variable (compiling source file C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Agent1\src\main.cpp)
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Agent1\src\main.cpp(27): warning C4101: 'iwrap': unreferenced local variable
+  Conway.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Agent1\build\Debug\Conway.exe
