@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
       
 	   //TODO Create MM1_Queue objects to capture the airport senario.
 	   MM1_Queue    checkin;
-	   checkin.set_file_names("ID_Check_log.txt", "ID_Check_wait.txt", "ID_Check_service.txt");
+	   checkin.set_file_names("Checkin_log.txt", "Checkin_wait.txt", "Checkin_service.txt");
 	   checkin.set_lambda(6);   // for this assignment this is set to a variable from the for loop.
 	   checkin.set_mu(53);
 	   checkin.initialize();
@@ -123,6 +123,9 @@ int main(int argc, char* argv[])
 
 
    //TODO Output statistics airport senario.
+   std::ofstream myfile;
+   myfile.open("Airport Stats.txt");
+   cout << "Checkin Time" << checkin.get_current_time() << endl;
    checkin.output(); cout << endl << endl;
    security1.output(); cout << endl << endl;
    security2.output(); cout << endl << endl;

@@ -21,4 +21,6 @@ c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\Tra
 c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(53): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(57): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\mac\desktop\ids6938-simulationtechniques\homework2\snakesandladders\TransitionMatrix.h(71): warning C4551: function call missing argument list
+C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\SnakesAndLadders\test_markov.cpp(28): warning C4018: '<': signed/unsigned mismatch
   Markov.vcxproj -> C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework2\SnakesAndLadders\build\Debug\Markov.exe

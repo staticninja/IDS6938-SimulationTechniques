@@ -24,14 +24,21 @@ int main(){
 	std::ofstream myfile;
 	myfile.open("markov_results.txt");
 	
-	
-   // TODO add Markov vector - Matrix multiplication
-	v = v.transpose() * TransitionMatrix; //formula from piazza and Dr. Kider. 
+		// TODO add Markov vector - Matrix multiplication
+for (int i = 0; i < ROLLS; i++)
+	{
+		//v = v.transpose() * TransitionMatrix; //formula from piazza and Dr. Kider. 
+		v = v.transpose() * BoardMatrix; //formula to multiply for Snakes and Ladders
 
-	
+		for (int j = 0; j < size; j++)
+		{
+			std::cout << v(j) << ",";
+			myfile << v(j) << ",";
+		}
 
-	myfile << v << std::endl;  //this is just a sample, becareful how you print to file so you can mine useful stats
-	
+		std::cout << std::endl;
+		myfile << std::endl;
+	}
 	myfile.close();
 
 

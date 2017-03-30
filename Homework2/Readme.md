@@ -262,10 +262,29 @@ Code to generate all but the last six rows of the Null State Transition Matrix:
 	</code>
 	</pre>
 	
+<pre>Check to confirm each row sums to 1.
+
+<code> 
+double sum;
+	for (int k = 0; k &lt; TransitionMatrix.rows(); k++)
+	{
+		sum = 0;
+		for (int l = 0; l &lt; size; l++)
+		{
+			sum = sum + TransitionMatrix(k, l);
+		}
+	}
+	if (sum != 1.0)
+		{
+		std::exit;
+		}
+</code>
+</pre>
 ### (b)
+
 Simulate and analyze the results of the null state game.
 
-#### DTMC
+#### Markov Chain
 
 #### Monte Carlo
 
@@ -276,7 +295,7 @@ Snakes & Ladders: In a simulation of 500 gmaes the modal numer of muves is 18.
 ### (c)
 Simulate and analyze the results of Snakes and Ladders game.
 
-#### DTMC
+#### Markov Chain
 
 #### Monte Carlo
 
@@ -335,7 +354,8 @@ Add a check to the process
  	   !checkin.is_within_error_range(0.002) ||
 	   !Security1.is_within_error_range(0.002) ||
 	   !Security2.is_within_error_range(0.002) ||
-	   !Security3.is_within_error_range(0.002) </pre>
+	   !Security3.is_within_error_range(0.002)
+</pre>
 Process next event
 <pre>
 	   Customer cust  = checkin.process_next_event();    // =  TODO: process next event;
@@ -354,21 +374,24 @@ Add external arrival where indicatred
 
 ### (c)
 Calculate Expected Results
-<code>
+<pre>
       expected_server_utilization_ = lambda_/mu_;
       expected_idle_prob_ = 1 - expected_server_utilization_;
       expected_queue_length_ = (expected_server_utilization_*expected_server_utilization_)/(1-expected_server_utilization_);
       expected_number_customers_ = expected_server_utilization_/(1-expected_server_utilization_);
       expected_waiting_time_ = expected_server_utilization_/(mu_-lambda_);
       expected_response_time_ = 1/(mu_-lambda_);
-      </code>
+      </pre>
 	  
 ### (d)
+
 ### (e)
-### Part 4 - Extra Features
+
+## Part 4 - Extra Features
  * (10 Points) Add 2D visualization to Anylogic for Part 3.
  * (10 Points) Add 3D visualization to Anylogic for Part3.
- <img src="https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework2/images/AnyLogic%20Graphics.PNG">
+ * <img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/c74457de/Homework2/images/AnyLogic%20Graphics.PNG">
+ 
  
 ### Part 5 - Final Report
 <pre>

@@ -38,7 +38,7 @@ int main() {
 		// Code if you wanted to print out results at each step
 		for (auto elem : discreteMC)
 		{
-			std::cout << elem << std::endl;
+		//	std::cout << elem << std::endl;
 			myfile << std::fixed << elem << std::endl;
 		}
 	}

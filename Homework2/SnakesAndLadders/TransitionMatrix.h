@@ -57,6 +57,19 @@ void SetTransitionMatrix()
 			TransitionMatrix(j, TransitionMatrix.rows() - 1) = prob * 6;
 		}
 	}
+	double sum;
+	for (int k = 0; k < TransitionMatrix.rows(); k++)
+	{
+		sum = 0;
+		for (int l = 0; l < size; l++)
+		{
+			sum = sum + TransitionMatrix(k, l);
+		}
+	}
+	if (sum != 1.0)
+		{
+		std::exit;
+		}
 }
 
 void SetBoardMatrix()
