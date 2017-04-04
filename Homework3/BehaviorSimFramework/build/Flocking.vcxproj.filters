@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Agent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\AgentDisplay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Behavior.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\BehaviorDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\BehaviorView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Environment.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Panel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Simulation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Transformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Agent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\AgentDisplay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Behavior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\BehaviorDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\BehaviorView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Environment.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Panel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Simulation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\Transformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\glut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\src\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\res\Behavior.ico" />
+    <None Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\res\Behavior.rc2" />
+    <None Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\res\BehaviorDoc.ico" />
+    <None Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\res\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\Mac\Desktop\IDS6938-SimulationTechniques\Homework3\BehaviorSimFramework\Behavior.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B697BE69-E7E8-303B-A9CB-3BD986A569C4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{525E1C62-C879-3E65-BCC7-D7DF8C9785C8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
