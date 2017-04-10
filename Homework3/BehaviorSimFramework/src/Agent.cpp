@@ -19,7 +19,7 @@ bool SIMAgent::debug = false;
 float SIMAgent::radius = 20.0;
 float SIMAgent::Mass = 1.0;
 float SIMAgent::Inertia = 1.0;
-float SIMAgent::MaxVelocity = 20.0;
+float SIMAgent::MaxVelocity = 15.0;
 float SIMAgent::MaxForce = 10.0;
 float SIMAgent::MaxTorque = 40.0;
 float SIMAgent::MaxAngVel = 10.0;
@@ -292,7 +292,9 @@ vec2 SIMAgent::Seek()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-
+	vd = SIMAgent::MaxVelocity;
+	tmp = goal - GPos;
+	thetad = atan2(tmp[1],tmp[2]);
 	return tmp;
 }
 
