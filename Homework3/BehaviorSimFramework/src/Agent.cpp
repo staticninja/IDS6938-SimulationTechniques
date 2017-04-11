@@ -12,6 +12,8 @@ static char THIS_FILE[]=__FILE__;
 #define new DEBUG_NEW
 #endif
 
+using namespace std;
+
 //Construct static variables
 //Their real values are set in static function SIMAgent::InitValues()
 vector<SIMAgent*> SIMAgent::agents;
@@ -19,7 +21,7 @@ bool SIMAgent::debug = false;
 float SIMAgent::radius = 20.0;
 float SIMAgent::Mass = 1.0;
 float SIMAgent::Inertia = 1.0;
-float SIMAgent::MaxVelocity = 15.0;
+float SIMAgent::MaxVelocity = 20.0;
 float SIMAgent::MaxForce = 10.0;
 float SIMAgent::MaxTorque = 40.0;
 float SIMAgent::MaxAngVel = 10.0;
@@ -227,19 +229,19 @@ void SIMAgent::InitValues()
 	SIMAgent::KNoise, SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood,
 	SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.
 	*********************************************/
-	Kv0 = 0.0;
-	Kp1 = 0.0;
-	Kv1 = 0.0;
-	KArrival = 0.0;
-	KDeparture = 0.0;
-	KNoise = 0.0;
-	KWander = 0.0;
-	KAvoid = 0.0;
-	TAvoid = 0.0;
-	RNeighborhood = 0.0;
-	KSeparate = 0.0;
-	KAlign = 0.0;
-	KCohesion = 0.0;
+	Kv0 = 10.0;
+	Kp1 = 256.0;
+	Kv1 = 32.0;
+	KArrival = 0.05;
+	KDeparture = 10000.0;
+	KNoise = 10.0;
+	KWander = 8.0;
+	KAvoid = 1.0;
+	TAvoid = 20.0;
+	RNeighborhood = 800.0;
+	KSeparate = 1000.0;
+	KAlign = 20.0;
+	KCohesion = 0.05;
 }
 
 /*
@@ -262,7 +264,10 @@ void SIMAgent::FindDeriv()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-
+	deriv[0] = 0;
+	deriv[1] = state[3];
+	deriv[2] = input[0] / Mass;
+	deriv[3] = input[1] / Inertia - state[3];
 }
 
 /*
@@ -291,10 +296,12 @@ vec2 SIMAgent::Seek()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-	vec2 tmp;
-	vd = SIMAgent::MaxVelocity;
-	tmp = goal - GPos;
-	thetad = atan2(tmp[1],tmp[2]);
+	vec2 tmp = goal - GPos;
+	
+	vd = MaxVelocity;
+	thetad = atan2(tmp[1], tmp[2]);
+	Vn = SIMAgent::MaxVelocity*(tmp.Length / R);
+	tmp = vec2 (cos(thetad)*vd, sin(thetad)*vd);
 	return tmp;
 }
 
