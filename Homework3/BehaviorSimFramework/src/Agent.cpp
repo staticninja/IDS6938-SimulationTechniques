@@ -5,14 +5,13 @@
 #include "stdafx.h"
 #include "Behavior.h"
 #include "Agent.h"
+#include <random>
 
 #ifdef _DEBUG
 #undef THIS_FILE
-static char THIS_FILE[]=__FILE__;
+static char THIS_FILE[] = __FILE__;
 #define new DEBUG_NEW
 #endif
-
-using namespace std;
 
 //Construct static variables
 //Their real values are set in static function SIMAgent::InitValues()
@@ -229,14 +228,14 @@ void SIMAgent::InitValues()
 	SIMAgent::KNoise, SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood,
 	SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.
 	*********************************************/
-	Kv0 = 10.0;
-	Kp1 = 256.0;
+	Kv0 = 8.0;
+	Kp1 = 250.0;
 	Kv1 = 32.0;
-	KArrival = 0.05;
-	KDeparture = 10000.0;
+	KArrival = 0.03;
+	KDeparture = 15.0;
 	KNoise = 10.0;
 	KWander = 8.0;
-	KAvoid = 1.0;
+	KAvoid = 100.0;
 	TAvoid = 20.0;
 	RNeighborhood = 800.0;
 	KSeparate = 1000.0;
@@ -245,15 +244,24 @@ void SIMAgent::InitValues()
 }
 
 /*
-*	You should apply the control rules given desired velocity vd and desired orientation thetad.
+* You should apply the control rules given desired velocity vd and desired orientation thetad.
+* Velocity control: input[0] = f = m * Kv0 * (vd - v)
+* Heading control: input[1] = tau = I * ( -Kv1 * thetaDot - Kp1 * theta + Kp1 * thetad)
+* This function sets input[0] and input[1] appropriately after being called.
 */
 void SIMAgent::Control()
 {
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	Truncate(vd, -SIMAgent::MaxVelocity, SIMAgent::MaxVelocity);
+	input[0] = SIMAgent::Mass * SIMAgent::Kv0 * (vd - state[2]);
+	Truncate(input[0], -SIMAgent::MaxForce, SIMAgent::MaxForce);
 
-}
+	double dangle = AngleDiff(state[1], thetad);
+	input[1] = SIMAgent::Inertia * (Kp1 * dangle - Kv1 * state[3]);
+	Truncate(input[1], -SIMAgent::MaxTorque, SIMAgent::MaxTorque);
+	}
 
 /*
 *	Compute derivative vector given input and state vectors
@@ -264,10 +272,16 @@ void SIMAgent::FindDeriv()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-	deriv[0] = 0;
+	deriv[0] = state[0];
 	deriv[1] = state[3];
 	deriv[2] = input[0] / Mass;
 	deriv[3] = input[1] / Inertia - state[3];
+
+	//The derivatives below did not work!
+	//deriv[2] = state[2]; //deriv[2] is the velocity of th eagent in local body coordinates.
+	//deriv[3] = state[3]; // deriv[3] is the angular velocity of the agent in world coordinates.
+	//deriv[0] = input[0] / Mass; //deriv[0] is the force in local body cooridnates divided by the mass.
+	//deriv[1] = input[1] / Inertia; //deriv[1] is the torque in local body coordinates divided by the inertia.
 }
 
 /*
@@ -280,7 +294,23 @@ void SIMAgent::UpdateState()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	for (int i = 0; i < dimState; i++) {
+		state[i] += deriv[i] * deltaT;
+	}
+	state[0] = 0.0;
 
+	ClampAngle(state[1]);
+	Truncate(state[2], -SIMAgent::MaxVelocity, SIMAgent::MaxVelocity);
+
+	vec2 GVelocity;
+	GVelocity[0] = state[2] * cos(state[1]);
+	GVelocity[1] = state[2] * sin(state[1]);
+	GPos += GVelocity;
+
+	Truncate(GPos[0], -1.0 * env->groundSize, env->groundSize);
+	Truncate(GPos[1], -1.0 * env->groundSize, env->groundSize);
+
+	Truncate(state[3], -SIMAgent::MaxAngVel, SIMAgent::MaxAngVel);
 }
 
 /*
@@ -296,12 +326,12 @@ vec2 SIMAgent::Seek()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
-	vec2 tmp = goal - GPos;
-	
+	vec2 tmp;
+	vec2 Vd = goal - GPos;
+	thetad = atan2(Vd[1], Vd[0]);
+	thetad += M_PI;
 	vd = MaxVelocity;
-	thetad = atan2(tmp[1], tmp[2]);
-	Vn = SIMAgent::MaxVelocity*(tmp.Length / R);
-	tmp = vec2 (cos(thetad)*vd, sin(thetad)*vd);
+	tmp = vec2(cos(thetad)* vd, sin(thetad)* vd);
 	return tmp;
 }
 
@@ -319,7 +349,10 @@ vec2 SIMAgent::Flee()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-
+	vec2 Vd = goal - GPos;
+	thetad = atan2(Vd[1], Vd[0]);
+	vd = MaxVelocity;
+	tmp = vec2(cos(thetad)* vd, sin(thetad)* vd);
 	return tmp;
 }
 
@@ -338,10 +371,18 @@ vec2 SIMAgent::Arrival()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-
-	return tmp;
+	vec2 Vd = goal - GPos;
+	double dist = Vd.Length();
+	vd = Vd.Length() * KArrival;
+	thetad = atan2(Vd[1], Vd[0]);
+	thetad += M_PI;
+	double vn = MaxVelocity * (vd / radius);
+	if (dist > 0)
+	{
+		return vec2(cos(thetad)*vd, sin(thetad)*vd);
+	}
+	return vec2(cos(thetad)*vn, sin(thetad)*vn);
 }
-
 /*
 *	Departure behavior
 *  Global goal position is in goal
@@ -357,12 +398,21 @@ vec2 SIMAgent::Departure()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-
-	return tmp;
+	vec2 Vd = goal - GPos;
+	double dist = Vd.Length();
+	vd = Vd.Length() * KDeparture;
+	thetad = atan2(Vd[1], Vd[0]);
+	
+	double vn = MaxVelocity * (vd / radius);
+	if (dist > 0)
+	{
+		return vec2(cos(thetad)*vd, sin(thetad)*vd);
+	}
+	return vec2(cos(thetad)*vn, sin(thetad)*vn);
 }
 
 /*
-*	Wander behavior
+*  Wander behavior
 *  VWander is in vWander
 *  V0(nominal velocity) is in v0
 *  Wander setting is in KWander
@@ -376,7 +426,11 @@ vec2 SIMAgent::Wander()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
+	std::random_device rd;
+	std::mt19937_64 mt(rd());
+	std::uniform_real_distribution<double> distribution(0, M_PI);
 
+	tmp = vec2(vd*cos(thetad), vd*sin(thetad));
 	return tmp;
 }
 
@@ -398,7 +452,7 @@ vec2 SIMAgent::Avoid()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-	
+
 	return tmp;
 }
 
