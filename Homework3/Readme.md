@@ -268,10 +268,10 @@ vec2 tmp;
 * **Photographs of Building Interior**<br>
 Photos are labeled from where they were taken=.
 
-	* Front Door<br>
-![](IDS6938-SimulationTechniques/Homework3/images/frontdoor1.PNG)
+	* Front Door 1<br>
+![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/frontdoor1.PNG)
 	* Front Door 2<br>
-![](IDS6938-SimulationTechniques/Homework3/images/frontdoor2.PNG)
+![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/frontdoor2.PNG)
 	* Side Door 1<br>
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/sidedoor1.PNG)
 	* Side Door 2<br>
@@ -285,9 +285,9 @@ Photos are labeled from where they were taken=.
 
 * **Description of Site**
 
-```
+<p>
 The selected site is the University of Central Florida's Psychology department building. It is located at 4111 Pictor Ln. Orlando Florida 32816. It is a 10 year old building with 3 accessable floors. The first floor of the building has 6 primary access points: two front doors, two side doors, and two back doors (identified above).
-```
+</p>
 
 * **Description of Scenario & Hpotheses**
 ```
