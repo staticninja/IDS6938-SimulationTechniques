@@ -286,13 +286,15 @@ Photos are labeled from where they were taken=.
 * **Description of Site**
 
 <p>
-The selected site is the University of Central Florida's Psychology department building. It is located at 4111 Pictor Ln. Orlando Florida 32816. It is a 10 year old building with 3 accessable floors. The first floor of the building has 6 primary access points: two front doors, two side doors, and two back doors (identified above).
+The selected site is the University of Central Florida's Psychology department building. It is located at 4111 Pictor Ln. Orlando Florida 32816. It is a 10-year-old building with 3 accessible floors. The first floor of the building has 6 primary access points: two front doors, two side doors, and two back doors (identified above). Additionally, there are two exit only doors in the largest classroom in the building.
 </p>
 
-* **Description of Scenario & Hpotheses**
-```
+* **Description of Scenario & Hpothesis**
+<p>
+Scenario: The situation that I designed using AnyLogic is that of regular fire drill.
+Hypothesis: With the large quantity of access points I believe that the building is adequately designed to handle the capacity of individuals within the building. However, this simulation is of only the first floor and my hypothesis may be rendered invalid by the inclusion of additional floors.
+</p>
 
-```
 * **Psychology Building - Normal Use**
 
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Psych%20Nomral.gif)
@@ -302,6 +304,12 @@ The selected site is the University of Central Florida's Psychology department b
 
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Psych%20w%20Alarm.gif)
 
+* **Results**
+<p>
+The results indicate that there is a moderate ‘bottle neck’ when people attempt to access backdoor 2 from the main part of the building. To have alleviated this, designs for the building could have anticipated this ‘bottle neck’ in simulation and adjusted the width of the hall.
+
+As expected pedestrian traffic and intensity spike prior to classes beginning, upon class completion, and when the fire alarm is triggered. The classroom capacity of this floor does not provide adequate space for students to sit while waiting for class. Many students are found sitting on the floor obstructing walkways. This factor could be changed without remodeling the building, by including chairs, tables, and other surfaces for students to utilize.
+</p>
 
 # References
 ### In order of importance:
