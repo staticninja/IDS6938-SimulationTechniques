@@ -7,7 +7,7 @@ This is the framework for homework #3.
 
 The assignment is due: **Monday, April  24 at 11:59PM (EST)**
 
-## Using 1 free exention day given by the instructor and the last 2 of my 3 granted by the syllabus.
+## Using 1 free exention day given by the instructor + last 2 from sylabus.
 
 ### Part 1: Behaviors
 
@@ -39,6 +39,7 @@ SIMAgent::KAlign 20
 SIMAgent::KCohesion 0.05
 </pre>
 
+***
 **(b) - 20 points**: In this part of the assignment you will need to implement 6 types of individual behaviors and 5 types of group behaviors. Create the following behaviors through appropriate computation of V<sub> d</sub>  and θ<sub>d</sub>  commands:
 * Seek
 <pre>
@@ -135,6 +136,7 @@ SIMAgent::KCohesion 0.05
 	return tmp;
 </pre>
 
+***
 **(c) - 20 points**: Implement the functions for the following group behaviors: 
 * Seperation
 <pre>
@@ -242,32 +244,59 @@ vec2 tmp;
 </pre>
 
 # Part 2 - Simulating a simple pedestrian flow
-
+***
 **(a) - 0 points**: Follow the Anylogic example for the [Subway Entrance example](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/tutorial/Subway_Entrance.html). Create the appropriate [boundaries and walls](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/markup/Wall.html), and the display ther pedestrian density map, [statistics](https://help.anylogic.com/index.jsp?nav=/4_1_5), [2D and 3D animations](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/reference/Animation.html).
 
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Subway.mp4.gif)
 
 
+***
 **(b) - 20 points**: Create a maze. Generate the pdm, stats, and animations like before. Vary [parameters in your agents](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/reference/Attributes.html) to give them different behaviors and show the pedistrians change how they navigate the maze.
 
-**Maze - Default Settings**
+* **Maze - Default Settings**
 
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Maze%20Default.gif)
 
 
-**Maze - Increased Right Turn Errors**
+* **Maze - Increased Right Turn Errors**
 
-![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Maze%20RT%20Error.gif)
+<center>![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Maze%20RT%20Error.gif)
 
-
+</center>
+***
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
-**Psychology Building - Normal Use**
+* **Photographs of Building Interior**<br>
+Photos are labeled from where they were taken=.
+
+	* Front Door<br>
+![](IDS6938-SimulationTechniques/Homework3/images/frontdoor1.PNG)
+	* Front Door 2<br>
+![](IDS6938-SimulationTechniques/Homework3/images/frontdoor2.PNG)
+	* Side Door 1<br>
+![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/sidedoor1.PNG)
+	* Side Door 2<br>
+![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/sidedoor2.PNG)
+	* Big Classroom<br>
+![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/bigclassroom.PNG)
+	* Back Door 1<br>
+![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/backdoor1.PNG)
+	* Back Door 2<br>
+![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/backdoor2.PNG)
+
+* **Description of Site**
+<pre>
+The selected site is the University of Central Florida's Psychology department building. It is located at 4111 Pictor Ln. Orlando Florida 32816. It is a 10 year old building with 3 accessable floors. The first floor of the building has 6 primary access points: two front doors, two side doors, and two back doors (identified above).
+</pre>
+
+* **Description of Scenario & Hpotheses**
+
+* **Psychology Building - Normal Use**
 
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Psych%20Nomral.gif)
 
 
-**Psychology Building - Fire Alarm Activation**
+* **Psychology Building - Fire Alarm Activation**
 
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Psych%20w%20Alarm.gif)
 
