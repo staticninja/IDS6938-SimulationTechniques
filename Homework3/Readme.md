@@ -282,9 +282,7 @@ vec2 tmp;
 **Psychology Building - Fire Alarm Activation**
 
 <p align="center">
-
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Psych%20w%20Alarm.gif)
-
 </p>
 
 
