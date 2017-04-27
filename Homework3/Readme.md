@@ -42,17 +42,17 @@ SIMAgent::KCohesion 0.05
 ***
 **(b) - 20 points**: In this part of the assignment you will need to implement 6 types of individual behaviors and 5 types of group behaviors. Create the following behaviors through appropriate computation of V<sub> d</sub>  and θ<sub>d</sub>  commands:
 * Seek
-<pre>
-	vec2 tmp;
-	vec2 Vd = goal - GPos;
-	thetad = atan2(Vd[1], Vd[0]);
-	vd = MaxVelocity;
-	tmp = vec2(cos(thetad) * vd, sin(thetad) * vd);
-	return tmp;
-</pre>
+```cpp
+vec2 tmp;
+vec2 Vd = goal - GPos;
+thetad = atan2(Vd[1], Vd[0]);
+vd = MaxVelocity;
+tmp = vec2(cos(thetad) * vd, sin(thetad) * vd);
+return tmp;
+```
     
 * Flee
-<pre>
+```cpp
 	vec2 tmp;
 	vec2 Vd = goal - GPos;
 	thetad = atan2(Vd[1], Vd[0]);
@@ -60,10 +60,10 @@ SIMAgent::KCohesion 0.05
 	vd = MaxVelocity;
 	tmp = vec2(cos(thetad)* vd, sin(thetad)* vd);
 	return tmp;
-</pre>
-    
+```
+
 * Arrival
-<pre>
+```cpp
 	vec2 tmp;
 	vec2 Vd = goal - GPos; //find difference vector
 	double dist = Vd.Length(); //determin the length of the difference
@@ -77,10 +77,10 @@ SIMAgent::KCohesion 0.05
 	}
 	tmp = vec2(cos(thetad)*close, sin(thetad)*close);
 	return tmp;
-</pre>
+```
     
 * Departure
-<pre>
+```cpp
 	vec2 tmp;
 	vec2 Vd = goal - GPos;
 	double dist = Vd.Length();
@@ -95,10 +95,10 @@ SIMAgent::KCohesion 0.05
 		return vec2(cos(thetad)*vd, sin(thetad)*vd);
 	}
 	return vec2(cos(thetad)*vn, sin(thetad)*vn);
-</pre>
+```
     
 * Wander
-<pre>
+```cpp
 	vec2 tmp;
 	float angle = float(rand() % 360) / 180.0 * M_PI; //taken from SimAgent::SimAgent
 	vec2 Vd = goal - GPos;
@@ -106,10 +106,10 @@ SIMAgent::KCohesion 0.05
 	thetad = angle;
 	tmp = vec2(vd*cos(thetad)*KNoise, vd*sin(thetad)*KNoise)*KWander;
 	return tmp;
-</pre>
-    
+```
+
 * Obstacle Avoidance
-<pre>
+```cpp
 	vec2 tmp;
 	vec2 sight1; //vector to monitor the farthest distance
 	vec2 sight2; //vector to monitor closer
@@ -134,12 +134,12 @@ SIMAgent::KCohesion 0.05
 	}
 	tmp = vec2(cos(thetad) * vd, sin(thetad) * vd);
 	return tmp;
-</pre>
+```
 
 ***
 **(c) - 20 points**: Implement the functions for the following group behaviors: 
 * Seperation
-<pre>
+```cpp
 vec2 tmp;
 	vec2 sum = vec2(0, 0);
 	vec2 Vdiff = vec2(0, 0);
@@ -163,10 +163,10 @@ vec2 tmp;
 		tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
 	}
 	return tmp;
-</pre>
+```
     
 * Cohesion 
-<pre>
+```cpp
 //basically the same thing as alignment with a modification to use location
 	vec2 tmp;
 	vec2 sum = vec2(0, 0);
@@ -189,10 +189,10 @@ vec2 tmp;
 		vd = mean.Length() * KCohesion;
 		tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
 		return tmp;
-</pre>
+```
 
 * Alignment 
-<pre>
+```cpp
 	vec2 tmp;
 	vec2 sum = vec2(0, 0);
 	vec2 Vd = vec2(0, 0);
@@ -212,10 +212,10 @@ vec2 tmp;
 	Truncate(vd, 0, MaxVelocity);
 	tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
 	return tmp;
-</pre>
+```
 
 * Flocking
-<pre>
+```cpp
 	//derived from webcourses
 	vec2 tmp;
 	vec2 sep = Separation();
@@ -224,10 +224,10 @@ vec2 tmp;
 	vec2 vflock = sep * KSeparate + align * KAlign + coh * KCohesion;
 	tmp = vflock;
 	return tmp;
-</pre>
+```
 
 * Leader Following
-<pre>
+```cpp
 	vec2 tmp;
 	if (this == SIMAgent::agents[0]) // taken from framwork code from the display function
 	{
@@ -241,7 +241,7 @@ vec2 tmp;
 		vec2 separation = Separation();
 		vec2 arrival = Arrival();
 		return tmp;
-</pre>
+```
 
 # Part 2 - Simulating a simple pedestrian flow
 ***
@@ -260,9 +260,8 @@ vec2 tmp;
 
 * **Maze - Increased Right Turn Errors**
 
-<center>![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Maze%20RT%20Error.gif)
+![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Maze%20RT%20Error.gif)
 
-</center>
 ***
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
@@ -286,12 +285,14 @@ Photos are labeled from where they were taken=.
 
 * **Description of Site**
 
-<pre>
+```
 The selected site is the University of Central Florida's Psychology department building. It is located at 4111 Pictor Ln. Orlando Florida 32816. It is a 10 year old building with 3 accessable floors. The first floor of the building has 6 primary access points: two front doors, two side doors, and two back doors (identified above).
-</pre>
+```
 
 * **Description of Scenario & Hpotheses**
+```
 
+```
 * **Psychology Building - Normal Use**
 
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Psych%20Nomral.gif)
