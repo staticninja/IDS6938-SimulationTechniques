@@ -3,9 +3,11 @@
 //////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
+#include <stdio.h>
 #include "Behavior.h"
 #include "Agent.h"
 #include <random>
+#include <vector>
 
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -17,7 +19,7 @@ static char THIS_FILE[] = __FILE__;
 //Their real values are set in static function SIMAgent::InitValues()
 vector<SIMAgent*> SIMAgent::agents;
 bool SIMAgent::debug = false;
-float SIMAgent::radius = 20.0;
+float SIMAgent::radius = 10.0;
 float SIMAgent::Mass = 1.0;
 float SIMAgent::Inertia = 1.0;
 float SIMAgent::MaxVelocity = 20.0;
@@ -37,6 +39,7 @@ float SIMAgent::RNeighborhood = 1.0;
 float SIMAgent::KSeparate = 1.0;
 float SIMAgent::KAlign = 1.0;
 float SIMAgent::KCohesion = 1.0;
+float DesSep = 1.0;
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
@@ -228,17 +231,17 @@ void SIMAgent::InitValues()
 	SIMAgent::KNoise, SIMAgent::KWander, SIMAgent::KAvoid, SIMAgent::TAvoid, SIMAgent::RNeighborhood,
 	SIMAgent::KSeparate, SIMAgent::KAlign, SIMAgent::KCohesion.
 	*********************************************/
-	Kv0 = 8.0;
-	Kp1 = 150.0;
+	Kv0 = 10.0;
+	Kp1 = 400.0;
 	Kv1 = 32.0;
-	KArrival = 0.03;
+	KArrival = 0.05;
 	KDeparture = 15.0;
 	KNoise = 10.0;
 	KWander = 8.0;
-	KAvoid = 100.0;
-	TAvoid = 20.0;
-	RNeighborhood = 800.0;
-	KSeparate = 100.0;
+	KAvoid = 80.0;
+	TAvoid = 5.0;
+	RNeighborhood = 100.0;
+	KSeparate = 200.0;
 	KAlign = 20.0;
 	KCohesion = 0.05;
 }
@@ -259,7 +262,7 @@ void SIMAgent::Control()
 	Truncate(input[0], -SIMAgent::MaxForce, SIMAgent::MaxForce);
 
 	double dangle = AngleDiff(state[1], thetad);
-	input[1] = SIMAgent::Inertia * (Kp1 * dangle - Kv1 * state[3]);
+	input[1] = SIMAgent::Inertia * (-Kp1 * dangle - Kv1 * state[3]); //Kp1 worked better when it was negative so I changed it here rather then in the constant.
 	Truncate(input[1], -SIMAgent::MaxTorque, SIMAgent::MaxTorque);
 	}
 
@@ -276,12 +279,6 @@ void SIMAgent::FindDeriv()
 	deriv[1] = state[3];//first derivative = velocity
 	deriv[2] = input[0] / Mass;//second derivative = acceleration. Force = Mass * Acceleration. Acceleration = Force/Mass.
 	deriv[3] = input[1] / Inertia;//third derivative = Jerk?
-
-	//The derivatives below did not work! They were gleaned from the homework writeup.
-	//deriv[2] = state[2]; //deriv[2] is the velocity of th eagent in local body coordinates.
-	//deriv[3] = state[3]; // deriv[3] is the angular velocity of the agent in world coordinates.
-	//deriv[0] = input[0] / Mass; //deriv[0] is the force in local body cooridnates divided by the mass.
-	//deriv[1] = input[1] / Inertia; //deriv[1] is the torque in local body coordinates divided by the inertia.
 }
 
 /*
@@ -329,7 +326,6 @@ vec2 SIMAgent::Seek()
 	vec2 tmp;
 	vec2 Vd = goal - GPos;
 	thetad = atan2(Vd[1], Vd[0]);
-	thetad += M_PI;
 	vd = MaxVelocity;
 	tmp = vec2(cos(thetad) * vd, sin(thetad) * vd);
 	return tmp;
@@ -351,6 +347,7 @@ vec2 SIMAgent::Flee()
 	vec2 tmp;
 	vec2 Vd = goal - GPos;
 	thetad = atan2(Vd[1], Vd[0]);
+	thetad += M_PI;
 	vd = MaxVelocity;
 	tmp = vec2(cos(thetad)* vd, sin(thetad)* vd);
 	return tmp;
@@ -371,17 +368,18 @@ vec2 SIMAgent::Arrival()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-	vec2 Vd = goal - GPos;
-	double dist = Vd.Length();
+	vec2 Vd = goal - GPos; //find difference vector
+	double dist = Vd.Length(); //determin the length of the difference
 	vd = Vd.Length() * KArrival;
 	thetad = atan2(Vd[1], Vd[0]);
-	thetad += M_PI;
-	double vn = MaxVelocity * (vd / radius);
+	double close = (vd / radius) * KArrival;
 	if (dist > 0)
 	{
-		return vec2(cos(thetad)*vd, sin(thetad)*vd);
+		tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
+		return tmp;
 	}
-	return vec2(cos(thetad)*vn, sin(thetad)*vn);
+	tmp = vec2(cos(thetad)*close, sin(thetad)*close);
+	return tmp;
 }
 /*
 *	Departure behavior
@@ -401,10 +399,13 @@ vec2 SIMAgent::Departure()
 	vec2 Vd = goal - GPos;
 	double dist = Vd.Length();
 	vd = Vd.Length() * KDeparture;
+	Vd.Normalize();
+	Truncate(vd, 0, MaxVelocity);
 	thetad = atan2(Vd[1], Vd[0]);
+	thetad += M_PI;
 	
 	double vn = MaxVelocity * (vd / radius);
-	if (dist > 0)
+	if (dist > radius)
 	{
 		return vec2(cos(thetad)*vd, sin(thetad)*vd);
 	}
@@ -452,17 +453,31 @@ vec2 SIMAgent::Avoid()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-	vec2 c = vec2 (0,0);
+	vec2 sight1; //vector to monitor the farthest distance
+	vec2 sight2; //vector to monitor closer
+	vec2 obj;
+
+	tmp = goal - GPos; //where the agent is trying to go
+	thetad = atan2(tmp[1], tmp[0]);
+	vd = MaxVelocity; //base max velocity as it is in seek
+	sight1 = GPos + v0.Normalize() * KAvoid;//longer sight range
+	sight2 = GPos + v0.Normalize() * KAvoid * 0.5;//shorter sight range
+
 	for (int i = 0; i < env->obstaclesNum; i++)
 	{
-		vec2 gpos_diff_obsticle = vec2 (env->obstacles[i][0]-GPos[0], env->obstacles[i][1]-GPos[1]); //differnece in agent loation to objects in global coordinates
-		vec2 local_diff_obsticle = WorldToLocal(gpos_diff_obsticle);
+		obj[0] = env->obstacles[i][0]; //object x coord
+		obj[1] = env->obstacles[i][1]; //object y coord
+		float Dsight1 = (obj - sight1).Length(); //distance from sight1 and the object
+		float Dsight2 = (obj - sight2).Length(); //distance from sight2 and the object
+		float r = env->obstacles[i][2]; //radius of the object
 
-		if (abs(local_diff_obsticle[0] > abs(TAvoid)))
+		if (Dsight1 <= r + KAvoid || Dsight2 <= r + KAvoid) //if distance from sight1 or sight2 and the object is less then the object radius + Kavoid
 		{
-			;
+			thetad = thetad + TAvoid;
+			tmp = vec2(cos(thetad) * vd, sin(thetad) * vd);
 		}
 	}
+	tmp = vec2(cos(thetad) * vd, sin(thetad) * vd);
 	return tmp;
 }
 
@@ -479,29 +494,33 @@ vec2 SIMAgent::Separation()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//Used "The Nature of Code" by Daniel Shiffman to try and help me understand what the formule would be here.
+	//However, although it did help me to understand the code I was looking at, the formulation was not usable in this
+	//specific set of code.
 	vec2 tmp;
 	vec2 sum = vec2(0, 0);
+	vec2 Vdiff = vec2(0, 0);
+	int count = 0; //tracking the number of BOIDS in the simulation
 	for (int i = 0; i < agents.size(); i++) //loop to evaluate the all the agents positions
 	{
-		vec2 dist = agents[i]->GPos - GPos; //determine the distance from self to another in vector form
-		if (dist[0] == 0 && dist[1] == 0) //if the for loop boid is self
-		{
-			continue;
-		}
+		Vdiff = GPos - agents[i]->GPos; //determine the distance from self to another in vector form
 
-		double neighbor = sqrt(dist[0] * dist[0] + dist[1] * dist[1]);
-		//distance between two points = squrt (x2-x1)^2 + (y2-y1)^2. dist = vector subtraction of 1 & 2.
-		
-		if (neighbor < RNeighborhood)
+		double dist = Vdiff.Length(); //the distance between the two vectors (i.e. how far from me to agents[i])
+
+		if ((dist < RNeighborhood) && (dist > 0)) //is the agent in RNeighborhood and with a distance greater than zero.
 		{
-			sum[0] += (dist[0] / abs(dist[0])) * KSeparate;
-			sum[1] += (dist[1] / abs(dist[1])) * KSeparate;
+			sum += Vdiff; //formule on webcourses Sum(nEN) (goal-position)/|(goal-position) * constant
+			count++;
 		}
 	}
-	vec2 NewV = sum;
-	vd = sqrt(NewV[0] * NewV[0] + NewV[1] * NewV[1]);
-	thetad = atan2(NewV[1], NewV[0]);
-	tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
+	if (count > 0)
+	{
+		tmp = sum.Normalize(); //this is the second half of the Sum(nEN) formule.
+		vd = tmp.Length() * KSeparate; //magnitude * constant
+		thetad = atan2(tmp[1], tmp[0]);
+		thetad += M_PI; //reverse the direction of the angle to move away.
+		tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
+	}
 	return tmp;
 }
 
@@ -519,35 +538,24 @@ vec2 SIMAgent::Alignment()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
-	vec2 sum = vec2 (0,0);
-	int num_agents = 0; //tracking the number of BOIDS in the simulation
+	vec2 sum = vec2(0, 0);
+	vec2 Vd = vec2(0, 0);
+	int count = 0; //tracking the number of BOIDS in the simulation
 	for (int i = 0; i < agents.size(); i++) //loop to evaluate the all the agents positions
 	{
-		vec2 dist = agents[i]->GPos - GPos; //determine the distance from self to another in vector form
-		int d = sqrt(dist[0] * dist[0] + dist[1] * dist[1]);
-		if ((d > 0) && (d < KAlign)) //distance between two points = squrt (x2-x1)^2 + (y2-y1)^2. dist = vector subtraction of 1 & 2.
+		vec2 vel = agents[i]->GPos - GPos; //determine the difference in velocity from the goal (agents[i]) and self (GPos)
+		if ((vel.Length() < RNeighborhood)) //distance between two points = squrt (x2-x1)^2 + (y2-y1)^2. dist = vector subtraction of 1 & 2.
 		{
-			sum += agents[i]->GPos; //add together
-			num_agents++; //count the number of boids checked
-			
-		}
-		if (num_agents > 0)
-		{
-			vec2 mean = sum / num_agents; //average velocity of all boids in neighborhood
-			mean.Normalize();
-			double mag = sqrt(mean[0] * mean[0] + mean[1] * mean[1]);
-			if (mag > MaxVelocity)
-			{
-				mean[0] / mag;
-				mean[1] / mag;
-				tmp = mean;
-			}
-		}
-		else
-		{
-			tmp = vec2(0, 0);
+			sum += agents[i]->v0.Normalize(); //add normalized velocity
+			count++; //count the number of boids checked
 		}
 	}
+	Vd = goal - GPos + sum; //Target velocity minus own-current velocity plus the sum of all other agents total normalized velocity.
+	thetad = atan2(Vd[1], Vd[0]);
+	vd = Vd.Length() * KAlign;
+	Truncate(vd, 0, MaxVelocity);
+	
+	tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
 	return tmp;
 }
 
@@ -564,29 +572,31 @@ vec2 SIMAgent::Cohesion()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//basically the same thing as alignment with a modification to use location
 	vec2 tmp;
 	vec2 sum = vec2(0, 0);
-	int num_agents = 0; //tracking the number of BOIDS in the simulation
+	int count = 0; //tracking the number of BOIDS in the simulation
 	for (int i = 0; i < agents.size(); i++) //loop to evaluate the all the agents positions
 	{
-		vec2 dist = agents[i]->GPos - GPos; //determine the distance from self to another in vector form
+		vec2 Vdiff = GPos - agents[i]->GPos; //determine the distance from self to another in vector form
 
-		double neighbor = sqrt(dist[0] * dist[0] + dist[1] * dist[1]);
+		double dist = Vdiff.Length();
 		//distance between two points = squrt (x2-x1)^2 + (y2-y1)^2. dist = vector subtraction of 1 & 2.
 
-		if (neighbor < RNeighborhood)
+		if ((dist < RNeighborhood*2) && (dist > 0))
 		{
-			sum[0] = sum[0] + agents[i]->GPos[0]; //IDK
-			sum[1] = sum[1] + agents[i]->GPos[1]; //IDK
-			num_agents++;
+			sum += Vdiff;
+			count++;
 		}
 	}
-	vec2 NewV = sum/num_agents;
-	vec2 cohesion = KCohesion*(NewV - GPos);
-	vd = sqrt(cohesion[0]*cohesion[0]+cohesion[1]*cohesion[1]);
-	thetad = atan2(cohesion[1], cohesion[0]);
-	tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
-	return tmp;
+	if (count > 0)
+	{
+		vec2 mean = (sum /count);
+		thetad = atan2(mean[1], mean[0]);
+		vd = mean.Length() * KCohesion;
+		tmp = vec2(cos(thetad)*vd, sin(thetad)*vd);
+		return tmp;
+	}
 }
 
 /*
@@ -601,10 +611,13 @@ vec2 SIMAgent::Flocking()
 	/*********************************************
 	// TODO: Add code here
 	*********************************************/
+	//derived from webcourses
 	vec2 tmp;
-	vec2 separation = Separation();
-	vec2 alignment = Alignment();
-	vec2 cohesion = Cohesion();
+	vec2 sep = Separation();
+	vec2 align = Alignment();
+	vec2 coh = Cohesion();
+	vec2 vflock = sep * KSeparate + align * KAlign + coh * KCohesion;
+	tmp = vflock;
 	return tmp;
 }
 
@@ -622,6 +635,18 @@ vec2 SIMAgent::Leader()
 	// TODO: Add code here
 	*********************************************/
 	vec2 tmp;
+	if (this == SIMAgent::agents[0]) // taken from framwork code from the display function
+	{
+		vec2 Lpos = SIMAgent::agents[0]->GPos;
+		vec2 seek = Seek();
+	}
+	else
+	{
+		//derived from webcourses
+		goal = agents[0]->GPos;
+		vec2 separation = Separation();
+		vec2 arrival = Arrival();
 
-	return tmp;
+		return tmp;
+	}
 }
