@@ -245,29 +245,32 @@ vec2 tmp;
 
 **(a) - 0 points**: Follow the Anylogic example for the [Subway Entrance example](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/tutorial/Subway_Entrance.html). Create the appropriate [boundaries and walls](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/markup/Wall.html), and the display ther pedestrian density map, [statistics](https://help.anylogic.com/index.jsp?nav=/4_1_5), [2D and 3D animations](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/reference/Animation.html).
 
-![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Subway.mp4.gif)
-
-<center><img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/79936657/Homework3/images/Subway.mp4.gif"></center>
+<center>![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Subway.mp4.gif)
+</center>
 
 **(b) - 20 points**: Create a maze. Generate the pdm, stats, and animations like before. Vary [parameters in your agents](https://help.anylogic.com/index.jsp?topic=/com.xj.anylogic.help/html/_PL/reference/Attributes.html) to give them different behaviors and show the pedistrians change how they navigate the maze.
 
 **Maze - Default Settings**
 
-<center><img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/79936657/Homework3/images/Maze%20Default.gif"></center>
+<center>![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Maze%20Default.gif)
+</center>
 
 **Maze - Increased Right Turn Errors**
 
-<center><img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/79936657/Homework3/images/Maze%20RT%20Error.gif"></center>
+<center>![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Maze%20RT%20Error.gif)
+</center>
 
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
 **Psychology Building - Normal Use**
 
-<center><img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/79936657/Homework3/images/Psych%20Nomral.gif"></center>
+<center>![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Psych%20Nomral.gif)
+</center>
 
 **Psychology Building - Fire Alarm Activation**
 
-<center><img src="https://cdn.rawgit.com/staticninja/IDS6938-SimulationTechniques/79936657/Homework3/images/Psych%20w%20Alarm.gif"></center>
+<center>![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/Psych%20w%20Alarm.gif)
+</center>
 
 
 # References
