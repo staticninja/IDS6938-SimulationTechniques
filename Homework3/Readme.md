@@ -266,7 +266,7 @@ vec2 tmp;
 **(c) - 30 points**: Model and analyze a building (or floor/outdoor space/stadium) on campus. (There is help on piazza how to find rough building plans - we expect something plausible). Create a senario: evacuation, daily office routine, special event, normal egress.... etc., and model and design your own experiment to determine if the building design suits the needs of its users. Start with photographs of your site, describe your site, describe your senario and hypothesis. Then use an agent-based pedistrian simulation to visualize your experiment's results.
 
 * **Photographs of Building Interior**<br>
-Photos are labeled from where they were taken=.
+Photos are labeled from where they were taken.
 
 	* Front Door 1<br>
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/frontdoor1.PNG)
