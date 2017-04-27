@@ -285,7 +285,7 @@ Photos are labeled from where they were taken=.
 ![](https://github.com/staticninja/IDS6938-SimulationTechniques/blob/master/Homework3/images/backdoor2.PNG)
 
 * **Description of Site**
-* 
+
 <pre>
 The selected site is the University of Central Florida's Psychology department building. It is located at 4111 Pictor Ln. Orlando Florida 32816. It is a 10 year old building with 3 accessable floors. The first floor of the building has 6 primary access points: two front doors, two side doors, and two back doors (identified above).
 </pre>
